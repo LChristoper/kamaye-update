@@ -2524,12 +2524,23 @@ footer .footer-container .navigation-container a:hover {
 /* Mobile Phone */
 @media (max-width: 430px) {
   /* Hero Home Section */
+  .hero-home .container {
+    min-height: 100vh;
+    min-height: 100svh;
+  }
+
   .hero-home .container .kamaye-video.desktop {
     display: none;
   }
 
   .hero-home .container .kamaye-video.mobile {
     display: block;
+    position: absolute; /* Posisi absolut untuk menutupi seluruh container */
+    top: 0;
+    left: 0;
+    width: 100%; /* Menetapkan lebar video menjadi 100% dari container */
+    height: 100%; /* Menetapkan tinggi video menjadi 100% dari container */
+    object-fit: cover; /* Menutupi seluruh area container tanpa mengubah rasio aspek */
   }
 
   /* Digital Agency Section */
