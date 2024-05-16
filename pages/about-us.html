@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
     <title>Kamaye</title>
 
     <!-- Icon Kamaye -->
@@ -25,6 +28,10 @@
 
     <!-- Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- Odometer -->
+    <link rel="stylesheet" href="../css/odometer.css" />
+    <script src="../js/odometer.js"></script>
   </head>
   <body>
     <!-- Navbar Start -->
@@ -71,7 +78,7 @@
             autoplay
           ></lottie-player>
         </div>
-  
+
         <video class="hero-about-bg desktop" autoplay loop muted>
           <source src="../assets/video/about-us/hero-about-us.mp4" />
         </video>
@@ -183,17 +190,19 @@
           ipsa vel quo.
         </p>
         <div class="ibc-container">
-          <div class="influencers-container">
-            <p class="number">5000+</p>
-            <p>Influencers</p>
+          <div class="influencers-container flex">
+            <p class="number">
+              <span class="influencers-odometer">0000</span>+
+            </p>
+            <p class="ibc-title">Influencers</p>
           </div>
-          <div class="brands-container">
-            <p class="number">500+</p>
-            <p>Brands</p>
+          <div class="brands-container flex">
+            <p class="number"><span class="brands-odometer">00</span>+</p>
+            <p class="ibc-title">Brands</p>
           </div>
-          <div class="influencers-container">
+          <div class="categories-container flex">
             <p class="number">Unlimited</p>
-            <p>Categories</p>
+            <p class="ibc-title">Categories</p>
           </div>
         </div>
       </div>

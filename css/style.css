@@ -385,7 +385,7 @@ h2 {
 }
 
 .digital-agency .trusted-wrapper h4 .brands-odometer {
-  font-size: 2.6rem;
+  font-size: 2.2vw;
 }
 
 /* What We Do Section */
@@ -461,9 +461,12 @@ h2 {
 }
 
 .wwd-flex2 lottie-player {
-  width: 12vw;
-  padding: 1rem;
-  padding-left: 0;
+  width: 12rem;
+  padding: 1.2rem;
+}
+
+.wwd-flex2 .wwd-progressing-icon {
+  width: 13.5rem;
 }
 
 .wwd .wwd-wrapper .wwd-container .wwd-flex2 .wwd-progressing-flex,
@@ -551,14 +554,14 @@ h2 {
 .wwd .os .os-container-flex .os-content-flex .os-content-wit a:hover {
   transform: scale(1.05);
   color: #000;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .wwd .os .os-container-flex .os-content-flex .os-content-wit a:active {
   color: #fff;
   transform: scale(1);
-  transition: 0.3s;
   filter: grayscale(0.2);
+  transition: 0.5s;
 }
 
 /* Our Influencer Section */
@@ -1999,11 +2002,9 @@ footer .footer-container .navigation-container a:hover {
 
 /* Our Fun Fact Section */
 .off {
-  width: 100%;
-  height: 50vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: var(--yahbloo);
   color: #fff;
@@ -2011,7 +2012,7 @@ footer .footer-container .navigation-container a:hover {
 
 .off .container {
   width: 70vw;
-  padding: 3rem 0;
+  padding: 2vw 0;
 }
 
 .off .container h2 {
@@ -2021,9 +2022,8 @@ footer .footer-container .navigation-container a:hover {
 }
 
 .off .container p {
-  font-weight: bold;
-  margin: 1rem 0;
-  margin-right: 30vw;
+  font-size: 1vw;
+  margin-right: 25vw;
 }
 
 .off .container .ibc-container p {
@@ -2036,10 +2036,19 @@ footer .footer-container .navigation-container a:hover {
   text-align: center;
   gap: 10vw;
   margin-top: 2vw;
+  font-weight: bold;
 }
 
 .off .container .ibc-container .number {
   font-size: 3vw;
+}
+
+.off .container .ibc-container .influencers-container,
+.brands-container,
+.categories-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* Brand Voice Section */
@@ -2520,12 +2529,110 @@ footer .footer-container .navigation-container a:hover {
   footer .footer-container .navigation-container ul li {
     font-size: 1.8vw;
   }
+
+  /* About Us Page */
+  /* About Our Stroy Section */
+  .aos {
+    height: 100%;
+  }
+
+  .aos .container {
+    grid-template-columns: 1fr;
+  }
+
+  .aos .container .aos-container {
+    padding: 0;
+  }
+
+  .aos .container .aos-container h2 {
+    font-size: 3vw;
+  }
+
+  .aos .container .aos-container h3 {
+    font-size: 5vw;
+  }
+
+  .aos .container .aos-container p {
+    font-size: 2vw;
+  }
+
+  .aos .container .bridging-container {
+    padding: 2.5rem;
+    border-radius: 20px;
+  }
+
+  .aos .container .progressing-container,
+  .blessing-container {
+    padding: 2.5rem;
+    border-radius: 20px;
+  }
+
+  .aos .container .bridging-container h3 {
+    font-size: 7vw;
+  }
+
+  .aos .container .progressing-container h3,
+  .blessing-container h3 {
+    font-size: 7vw;
+  }
+
+  .aos .container .bridging-container p {
+    font-size: 2.5vw;
+  }
+
+  .aos .container .progressing-container p,
+  .blessing-container p {
+    font-size: 2.5vw;
+  }
+  
+  /* Our Fun Fact Section */
+  .off .container {
+    width: 90vw;
+    padding: 8vw 0;;
+  }
+  
+  .off .container h2 {
+    font-size: 7vw;
+  }
+
+  .off .container p {
+    font-size: 3vw;
+    text-align: justify;
+    margin-right: 0;
+  }
+
+  
+  .off .container .ibc-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+    margin: 5vw auto 0 auto;
+  }
+  
+  .off .container .ibc-container p {
+    text-align: center;
+  }
+
+  .off .container .ibc-container .number {
+    font-size: 10vw;
+  }
+
+  .off .container .ibc-container .ibc-title {
+    font-size: 4vw;
+  }
+
+  .off
+  .clients-container
+  .clients-logo
+  .clients-logo-slide
+    img {
+    height: 12vw;
+  }
 }
 /* Mobile Phone */
 @media (max-width: 430px) {
   /* Hero Home Section */
   .hero-home .container {
-    min-height: 100vh;
     min-height: 100svh;
   }
 
@@ -2535,12 +2642,12 @@ footer .footer-container .navigation-container a:hover {
 
   .hero-home .container .kamaye-video.mobile {
     display: block;
-    position: absolute; /* Posisi absolut untuk menutupi seluruh container */
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%; /* Menetapkan lebar video menjadi 100% dari container */
-    height: 100%; /* Menetapkan tinggi video menjadi 100% dari container */
-    object-fit: cover; /* Menutupi seluruh area container tanpa mengubah rasio aspek */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   /* Digital Agency Section */
@@ -2578,6 +2685,10 @@ footer .footer-container .navigation-container a:hover {
     font-size: 1rem;
   }
 
+  .digital-agency .trusted-wrapper h4 .brands-odometer {
+    font-size: 5vw;
+  }
+
   .digital-agency
     .trusted-wrapper
     .clients-container
@@ -2588,9 +2699,14 @@ footer .footer-container .navigation-container a:hover {
   }
 
   /* What We Do Section */
+  .wwd .wwd-wrapper .wwd-container .wwd-flex1 {
+    flex: 1 1 18vw;
+    padding-right: 0;
+  }
 
   .wwd .wwd-wrapper .wwd-container .wwd-flex1 p {
     font-size: 0.8rem;
+    padding: 1rem 0;
   }
 
   .wwd .wwd-wrapper .wwd-container .wwd-flex2 p {
@@ -2717,10 +2833,15 @@ footer .footer-container .navigation-container a:hover {
   }
 
   .im .im-container .bubble {
-    width: 60px;
-    height: 60px;
+    width: 14vw;
+    height: 13vw;
     font-size: 0.55rem;
-    margin: 0;
+    margin: 0 1vw;
+  }
+
+  .im .im-container .bubble::after {
+    width: 2.5vw;
+    right: -3.7vw;
   }
 
   .im .im-container p {
@@ -2968,12 +3089,22 @@ footer .footer-container .navigation-container a:hover {
 
   /* About Us Page */
   /* Hero About Us Section */
+  .hero-about .container {
+    height: 100svh;
+  }
+
   .hero-about .container .hero-about-bg.desktop {
     display: none;
   }
 
   .hero-about .container .hero-about-bg.mobile {
     display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .hero-about .container .woman-about-container {

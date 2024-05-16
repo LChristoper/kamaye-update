@@ -40,12 +40,44 @@ window.addEventListener("scroll", function () {
 
 // Odometer Animation
 const countOdometer = document.querySelector(".brands-odometer");
+const influencersOdometer = document.querySelector(".influencers-odometer");
 
-const odometer = new Odometer({
-  el: countOdometer,
-});
+// Opsi untuk Intersection Observer
+const observerOptions = {
+  root: null, // menggunakan viewport sebagai area konteks
+  rootMargin: "0px",
+  threshold: 0.1, // elemen harus terlihat minimal 10% sebelum trigger
+};
 
-countOdometer.innerHTML = 50;
+// Fungsi yang dijalankan ketika elemen masuk ke dalam viewport
+const handleIntersect = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      // Inisialisasi Odometer hanya ketika elemen terlihat
+      if (entry.target === countOdometer) {
+        const odometer1 = new Odometer({
+          el: countOdometer,
+        });
+        countOdometer.innerHTML = 50;
+      } else if (entry.target === influencersOdometer) {
+        const odometer2 = new Odometer({
+          el: influencersOdometer,
+        });
+        influencersOdometer.innerHTML = 5000;
+      }
+
+      // Berhenti mengamati setelah odometer diinisialisasi
+      observer.unobserve(entry.target);
+    }
+  });
+};
+
+// Membuat observer dengan fungsi callback dan opsi
+const observer = new IntersectionObserver(handleIntersect, observerOptions);
+
+// Memulai mengamati elemen target
+observer.observe(countOdometer);
+observer.observe(influencersOdometer);
 
 // Horizontally Scroll
 gsap.registerPlugin(ScrollTrigger);
