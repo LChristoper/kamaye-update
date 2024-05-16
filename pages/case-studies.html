@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kamaye</title>
+
+    <!-- Icon Kamaye -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../assets/img/Favicon-Positive.png"
+    />
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <style>
+      .navbar .navbar-nav .none::after {
+        content: "";
+        display: block;
+        padding-bottom: 0;
+        border-bottom: 0;
+        transform: scaleX(0);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar active">
+      <a href="../index.html" class="navbar-logo">
+        <img
+          src="../assets/img/kamaye-logo.png"
+          alt="Kamaye Logo"
+          class="logo"
+        />
+      </a>
+      <div class="navbar-nav active">
+        <a href="#">About</a>
+        <a href="#">Our Services</a>
+        <a href="#" style="cursor: default" class="line-navbar">
+          <div class="block"></div>
+        </a>
+        <a href="pages/case-studies.html"><span>Case Studies</span></a>
+        <a href="#" class="none">
+          <button class="contact">CONTACT US</button>
+        </a>
+      </div>
+      <div class="navbar-lang">
+        <a href="" class="use">EN</a>
+        <a href="" class="not-use">IDN</a>
+      </div>
+      <div class="navbar-extra">
+        <a href="#" id="hamburger-menu">
+          <svg
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <use href="../assets/img/feather-sprite.svg#menu" />
+            <use href="../assets/img/feather-sprite.svg#x" />
+          </svg>
+        </a>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero Section Start -->
+    <section class="hero1">
+      <div class="container">
+        <lottie-player
+          class="kamaye-video"
+          src="../assets/video/hero.json"
+          background="transparent"
+          speed="1"
+          loop
+          autoplay
+        ></lottie-player>
+      </div>
+    </section>
+
+    <!-- Case Studies Section Start -->
+    <section class="case-studies" id="case-studies">
+      <!-- Filter Start -->
+      <h2>FILTER CASE STUDIES BY:</h2>
+      <div class="filter-buttons">
+        <button class="filter-all btn active" onclick="filterSelection('all')">
+          ALL
+        </button>
+        <button class="filter-beauty btn" onclick="filterSelection('beauty')">
+          BEAUTY
+        </button>
+        <button class="filter-food btn" onclick="filterSelection('food')">
+          FOOD
+        </button>
+        <button
+          class="filter-financial-education"
+          onclick="filterSelection('financial-education')"
+        >
+          FINANCIAL EDUCATION
+        </button>
+        <button class="filter-cooking btn" onclick="filterSelection('cooking')">
+          COOKING
+        </button>
+        <button
+          class="filter-entertainment btn"
+          onclick="filterSelection('entertainment')"
+        >
+          ENTERTAINMENT
+        </button>
+        <button class="filter-healty btn" onclick="filterSelection('healthy')">
+          HEALTHY
+        </button>
+      </div>
+      <!-- Filter End -->
+
+      <div class="card-container">
+        <div class="case-studies-card filter-healthy-card">
+          <a href="#">
+            <img src="../assets/img/case-studies/1.png" alt="" />
+          </a>
+          <div class="category">
+            <button class="healthy">HEALTHY</button>
+          </div>
+        </div>
+        <div class="case-studies-card filter food">
+          <a href="#">
+            <img src="../assets/img/case-studies/2.png" alt="" />
+          </a>
+          <div class="category">
+            <button class="food">FOOD</button>
+          </div>
+        </div>
+        <div class="case-studies-card filter healthy">
+          <a href="#">
+            <img src="../assets/img/case-studies/3.png" alt="" />
+          </a>
+          <div class="category">
+            <button class="healthy">HEALTHY</button>
+          </div>
+        </div>
+        <div class="case-studies-card filter food">
+          <a href="#">
+            <img src="../assets/img/case-studies/4.png" alt="" />
+          </a>
+          <div class="category">
+            <button class="food">FOOD</button>
+          </div>
+        </div>
+        <div class="case-studies-card filter entertainment">
+          <a href="#">
+            <img src="../assets/img/case-studies/5.png" alt="" />
+          </a>
+          <div class="category">
+            <button class="entertainment">ENTERTAINMENT</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Studies Section End -->
+
+    <div class="clients-container">
+      <div
+        class="clients-logo"
+        style="background-color: #fff; border: 2px solid #000"
+      >
+        <!-- Clients Section Start -->
+        <div class="clients-logo-slide" style="mix-blend-mode: difference">
+          <img src="../assets/img/clients/AIRWICK.png" alt="" />
+          <img src="../assets/img/clients/AKULAKU.png" alt="" />
+          <img src="../assets/img/clients/BAKMI MEWAH.png" alt="" />
+          <img src="../assets/img/clients/BNI46.png" alt="" />
+          <img src="../assets/img/clients/BUKALAPAK.png" alt="" />
+          <img src="../assets/img/clients/CHICKRO.png" alt="" />
+          <img src="../assets/img/clients/CHOCOLATOS.png" alt="" />
+          <img src="../assets/img/clients/CODASHOP.png" alt="" />
+          <img src="../assets/img/clients/DELICO.png" alt="" />
+          <img src="../assets/img/clients/DETTOL.png" alt="" />
+          <img src="../assets/img/clients/DEXAMEDICA.png" alt="" />
+          <img src="../assets/img/clients/FIZZO.png" alt="" />
+          <img src="../assets/img/clients/GAMEQOO.png" alt="" />
+          <img src="../assets/img/clients/garudafood.png" alt="" />
+          <img src="../assets/img/clients/GERY SALUT.png" alt="" />
+          <img src="../assets/img/clients/HALODODC.png" alt="" />
+          <img src="../assets/img/clients/HERBA ASIMOR.png" alt="" />
+          <img src="../assets/img/clients/INTI PRIMA RASA.png" alt="" />
+          <img src="../assets/img/clients/MAYORA.png" alt="" />
+          <img src="../assets/img/clients/NANOVEST.png" alt="" />
+          <img src="../assets/img/clients/NUTRIFFOD.png" alt="" />
+          <img src="../assets/img/clients/NUTRISARI.png" alt="" />
+          <img src="../assets/img/clients/OXYVIT.png" alt="" />
+          <img src="../assets/img/clients/PERFECTVIT.png" alt="" />
+          <img src="../assets/img/clients/RECKITT.png" alt="" />
+          <img src="../assets/img/clients/SAVIOR.png" alt="" />
+          <img src="../assets/img/clients/SHOPEE.png" alt="" />
+          <img src="../assets/img/clients/SHOPEEFOOD.png" alt="" />
+          <img src="../assets/img/clients/SHOPEEPAY.png" alt="" />
+          <img src="../assets/img/clients/STIMUNO.png" alt="" />
+          <img src="../assets/img/clients/SWISSE.png" alt="" />
+          <img src="../assets/img/clients/TELKOMSEL REDI.png" alt="" />
+          <img src="../assets/img/clients/TUMBUH LAB.png" alt="" />
+          <img src="../assets/img/clients/VANISH.png" alt="" />
+          <img src="../assets/img/clients/VISVAL.png" alt="" />
+          <img src="../assets/img/clients/WEBTOON.png" alt="" />
+        </div>
+        <div class="clients-logo-slide" style="mix-blend-mode: difference">
+          <img src="../assets/img/clients/AIRWICK.png" alt="" />
+          <img src="../assets/img/clients/AKULAKU.png" alt="" />
+          <img src="../assets/img/clients/BAKMI MEWAH.png" alt="" />
+          <img src="../assets/img/clients/BNI46.png" alt="" />
+          <img src="../assets/img/clients/BUKALAPAK.png" alt="" />
+          <img src="../assets/img/clients/CHICKRO.png" alt="" />
+          <img src="../assets/img/clients/CHOCOLATOS.png" alt="" />
+          <img src="../assets/img/clients/CODASHOP.png" alt="" />
+          <img src="../assets/img/clients/DELICO.png" alt="" />
+          <img src="../assets/img/clients/DETTOL.png" alt="" />
+          <img src="../assets/img/clients/DEXAMEDICA.png" alt="" />
+          <img src="../assets/img/clients/FIZZO.png" alt="" />
+          <img src="../assets/img/clients/GAMEQOO.png" alt="" />
+          <img src="../assets/img/clients/garudafood.png" alt="" />
+          <img src="../assets/img/clients/GERY SALUT.png" alt="" />
+          <img src="../assets/img/clients/HALODODC.png" alt="" />
+          <img src="../assets/img/clients/HERBA ASIMOR.png" alt="" />
+          <img src="../assets/img/clients/INTI PRIMA RASA.png" alt="" />
+          <img src="../assets/img/clients/MAYORA.png" alt="" />
+          <img src="../assets/img/clients/NANOVEST.png" alt="" />
+          <img src="../assets/img/clients/NUTRIFFOD.png" alt="" />
+          <img src="../assets/img/clients/NUTRISARI.png" alt="" />
+          <img src="../assets/img/clients/OXYVIT.png" alt="" />
+          <img src="../assets/img/clients/PERFECTVIT.png" alt="" />
+          <img src="../assets/img/clients/RECKITT.png" alt="" />
+          <img src="../assets/img/clients/SAVIOR.png" alt="" />
+          <img src="../assets/img/clients/SHOPEE.png" alt="" />
+          <img src="../assets/img/clients/SHOPEEFOOD.png" alt="" />
+          <img src="../assets/img/clients/SHOPEEPAY.png" alt="" />
+          <img src="../assets/img/clients/STIMUNO.png" alt="" />
+          <img src="../assets/img/clients/SWISSE.png" alt="" />
+          <img src="../assets/img/clients/TELKOMSEL REDI.png" alt="" />
+          <img src="../assets/img/clients/TUMBUH LAB.png" alt="" />
+          <img src="../assets/img/clients/VANISH.png" alt="" />
+          <img src="../assets/img/clients/VISVAL.png" alt="" />
+          <img src="../assets/img/clients/WEBTOON.png" alt="" />
+        </div>
+        <!-- Clients Section End -->
+      </div>
+    </div>
+
+    <!-- Javascript-->
+    <script src="../js/script.js"></script>
+  </body>
+</html>
