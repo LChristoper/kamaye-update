@@ -75,9 +75,14 @@ const handleIntersect = (entries, observer) => {
 // Membuat observer dengan fungsi callback dan opsi
 const observer = new IntersectionObserver(handleIntersect, observerOptions);
 
-// Memulai mengamati elemen target
-observer.observe(countOdometer);
-observer.observe(influencersOdometer);
+// Memulai mengamati elemen target jika elemen tersebut ada di halaman
+if (countOdometer) {
+  observer.observe(countOdometer);
+}
+
+if (influencersOdometer) {
+  observer.observe(influencersOdometer);
+}
 
 // Horizontally Scroll
 gsap.registerPlugin(ScrollTrigger);
@@ -190,7 +195,7 @@ function changeContent(destination) {
 }
 
 // Call changeContent with "top" to set it as the default case
-changeContent("top");
+changeContent("top"); 
 
 document.addEventListener("DOMContentLoaded", function () {
   // Select all funnel containers
