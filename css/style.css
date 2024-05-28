@@ -1315,6 +1315,11 @@ h2 {
   overflow: hidden;
 }
 
+.home-team .team-video {
+  object-fit: cover;
+  width: 100%;
+}
+
 .home-team .team-video.mobile {
   display: none;
 }
@@ -1875,6 +1880,12 @@ footer .footer-container .navigation-container a:hover {
   width: 100%;
   margin-bottom: -0.5vw;
 }
+
+.hero-services .hero-services-bg.mobile {
+  display: none;
+}
+
+
 
 /* Tablet */
 @media (max-width: 900px) {

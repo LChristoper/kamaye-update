@@ -96,9 +96,10 @@ gsap.to(".wrd", {
   scrollTrigger: {
     trigger: ".wrd",
     pin: true,
-    scrub: 1,
+    start: "top top",
     end: () =>
       "+=" + (horizontalSectionWidth - document.documentElement.clientWidth),
+    scrub: 0.5, // Mengurangi nilai scrub untuk mengurangi sensitivitas
   },
 });
 
