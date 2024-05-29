@@ -1006,7 +1006,7 @@ h2 {
 
 .im .im-container .plan-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -1032,8 +1032,8 @@ h2 {
 .im .im-container .bubble::after {
   content: "";
   position: absolute;
-  width: 60px;
-  right: -65px;
+  width: 2vw;
+  right: -2.3vw;
   top: 50%;
   transform: translateY(-50%);
   height: 5px;
@@ -1163,6 +1163,22 @@ h2 {
 .engagement-container:hover,
 .conversion-container:hover {
   transform: scale(1.05);
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.bounce {
+  animation: bounce 2s infinite;
 }
 
 .aec .aec-selector .title-container {
@@ -1324,17 +1340,162 @@ h2 {
   display: none;
 }
 
-/* How To Works Section */
+/* How To Work Section */
 .htw .htw-container {
   position: relative;
+  height: 100vh;
 }
 
 .htw .htw-container .htw-video{
   width: 100%;
+  position: absolute;
+  z-index: -1;
 }
 
 .htw .htw-container .htw-video.mobile {
   display: none;
+}
+
+@keyframes fadeInBlur {
+  from {
+    opacity: 0;
+    filter: blur(100px);
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0);
+  }
+}
+
+.htw .htw-container .contact-us-container {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  align-items: end;
+  transition: opacity 0.5s, filter 0.5s;
+}
+
+.htw .htw-container .contact-us-container.visible {
+  opacity: 0;
+  filter: blur(100px);
+  transform: translateY(100px);
+  z-index: -1;
+  animation: fadeInBlur 0.5s ease-out 6s forwards;
+}
+
+.htw .htw-container .contact-us-container .contact-woman img {
+  width: 20vw;
+  display: flex;
+  justify-content: end;
+}
+
+.htw .htw-container .contact-us-container .contact-icon {
+  margin-right: 2rem;
+  margin-bottom: 3rem;
+  z-index: 1;
+}
+
+.social-buttons {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #f2f2f2; */
+  box-shadow: 0px 0px 15px #00000027;
+  padding: 15px 30px;
+  border-radius: 5em;
+}
+
+.social-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 25px;
+  box-shadow: 0px 0px 4px #00000027;
+  transition: 0.3s;
+}
+
+.social-button:hover {
+  background-color: #f2f2f2;
+  box-shadow: 0px 0px 6px 3px #00000027;
+}
+
+.social-buttons svg {
+  transition: 0.3s;
+  height: 20px;
+}
+
+.email {
+  background-color: #000;
+  color: white;
+}
+
+.email:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.whatsapp {
+  background-color: #00b427;
+}
+
+.whatsapp svg {
+  width: 25px;
+  height: 25px;
+  fill: #f2f2f2;
+}
+
+.whatsapp:hover svg {
+  fill: #00b427;
+}
+
+.linkedin {
+  background-color: #0077b5;
+}
+
+.linkedin svg {
+  fill: #f2f2f2;
+}
+
+.linkedin:hover svg {
+  fill: #0077b5;
+}
+
+.instagram {
+  background-color: #c13584;
+}
+
+.instagram svg {
+  fill: #f2f2f2;
+}
+
+.instagram:hover svg {
+  fill: #c13584;
+}
+
+.icon-name {
+  position: absolute;
+  bottom: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.social-button:hover .icon-name {
+  visibility: visible;
+  opacity: 1;
 }
 
 
@@ -1692,8 +1853,6 @@ footer .footer-container .navigation-container a:hover {
 
 /* About Our Story Section */
 .aos {
-  width: 100%;
-  height: 100vh;
   position: relative;
   background-color: #242424;
 }
@@ -1707,7 +1866,7 @@ footer .footer-container .navigation-container a:hover {
 }
 
 .aos .container .aos-container {
-  padding: 1rem 0 10rem 0;
+  padding: 1rem 0 5vw 0;
 }
 
 .aos .container .aos-container h2 {
@@ -1842,10 +2001,10 @@ footer .footer-container .navigation-container a:hover {
 /* Brand Voice Section */
 .bv {
   width: 100%;
-  height: 50vh;
+  height: 70vh;
   background-color: #242424;
   display: flex;
-  padding: 3rem 15vw 0 15vw;
+  padding: 5% 15vw 0 15vw;
   color: #fff;
 }
 
@@ -1875,7 +2034,6 @@ footer .footer-container .navigation-container a:hover {
 
 /* Our Services Pages */
 /* Hero Section */
-
 .hero-services .hero-services-bg {
   width: 100%;
   margin-bottom: -0.5vw;
@@ -1885,6 +2043,51 @@ footer .footer-container .navigation-container a:hover {
   display: none;
 }
 
+/* What We Served Section */
+.wws {
+  height: 100vh;
+
+}
+
+.wws .wws-bg {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.wws .container {
+  padding: 3%;
+}
+
+.wws .container h2 {
+  font-size: 4.5vw;
+  font-family: "TT-Hoves-Bold";
+}
+
+.wws .container p {
+  font-size: 1vw;
+  width: 50%;
+}
+
+.wws .container .iw-container {
+  margin: 4% 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.wws .container .iw-container h3 {
+  font-size: 1.5vw;
+}
+
+.wws .container .iw-container ul {
+  list-style-type: square;
+  list-style-position: inside;
+}
+
+.wws .container .iw-container ul  li {
+  margin: 2vw 0;
+  font-size: 1vw;
+}
 
 
 /* Tablet */
@@ -2298,7 +2501,6 @@ footer .footer-container .navigation-container a:hover {
     fill: var(--jade_android);
     position: absolute;
     bottom: -400px;
-    /* border: 1px solid red; */
   }
 
   .wrd .panel.panel3.desktop {
@@ -2346,23 +2548,37 @@ footer .footer-container .navigation-container a:hover {
     text-align: center;
   }
 
-  .im .im-container .bubble {
-    width: 100px;
-    height: 100px;
-    font-size: 0.9rem;
-    margin: 0 1rem;
-  }
-
   .im .im-container p {
     font-size: 1.4rem;
     margin: 2rem 0;
     padding: 0 10vw;
   }
 
+  .im .im-container .plan-container {
+    flex-direction: column;
+  }
+
+  .im .im-container .bubble {
+    width: 20vw;
+    height: 19vw;
+    font-size: 2.5vw;
+    margin: 1rem 0;
+  }
+
+  .im .im-container .bubble::after {
+    height: 4.3vw;
+    bottom: -40%;
+    width: 3px;
+  }
+  
   /* AEC Section */
+  .aec {
+    height: 110vh;
+  }
+
   .aec .aec-selector {
     display: flex;
-    height: 85vh;
+    height: 90vh;
   }
 
   .aec .aec-content-display .aec-content-container {
@@ -2388,9 +2604,12 @@ footer .footer-container .navigation-container a:hover {
   }
 
   .aec .aec-content-display .aec-content-container {
+    /* width: ; */
+    height: 110vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
   }
 
   .aec .aec-content-display .aec-content-container .left-display h5 {
@@ -2400,6 +2619,10 @@ footer .footer-container .navigation-container a:hover {
 
   .aec .aec-content-display .aec-content-container .left-display p {
     margin-right: 0;
+  }
+
+  .aec .aec-content-display .aec-content-container .middle-display {
+    height: 100vh;
   }
 
   .aec .aec-content-display .aec-content-container .right-display {
@@ -2440,6 +2663,19 @@ footer .footer-container .navigation-container a:hover {
     margin-top: 1rem;
   }
 
+  /* Team Section */
+  .home-team .team-video {
+    width: 100%;
+  }
+
+  .home-team .team-video.desktop {
+    display: none;
+  }
+
+  .home-team .team-video.mobile {
+    display: block;
+  }
+
   /* Footer Section */
   footer .footer-container .address-container {
     flex: 1 1 40vw;
@@ -2454,7 +2690,7 @@ footer .footer-container .navigation-container a:hover {
   }
 
   /* About Us Page */
-  /* About Our Stroy Section */
+  /* About Our Story Section */
   .aos {
     height: 100%;
   }
@@ -2550,6 +2786,30 @@ footer .footer-container .navigation-container a:hover {
   .clients-logo-slide
     img {
     height: 12vw;
+  }
+
+  /* Brand Voice Section */
+  .bv {
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bv .container img {
+    width: 10vw;
+  }
+
+  .bv .container h2 {
+    font-size: 5vw;
+  }
+
+  .bv .container p {
+    font-size: 2vw;
+  }
+
+  .bv .bv-lottie {
+    width: 70%;
   }
 }
 
@@ -2808,25 +3068,26 @@ footer .footer-container .navigation-container a:hover {
 
   /* Influencer Marketing Section */
   .im .im-container h3 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-bottom: 1rem;
-  }
-
-  .im .im-container .bubble {
-    width: 14vw;
-    height: 13vw;
-    font-size: 0.55rem;
-    margin: 0 1vw;
-  }
-
-  .im .im-container .bubble::after {
-    width: 2.5vw;
-    right: -3.7vw;
   }
 
   .im .im-container p {
     font-size: 0.8rem;
     margin-bottom: 0;
+  }
+
+ .im .im-container .bubble {
+    width: 24vw;
+    height: 23vw;
+    font-size: 3.2vw;
+    margin: 0.5rem 0;
+  }
+
+  .im .im-container .bubble::after {
+    height: 4.6vw;
+    bottom: -40%;
+    width: 3px;
   }
 
   /* AEC Section */
@@ -3021,7 +3282,7 @@ footer .footer-container .navigation-container a:hover {
     width: 180%;
   }
 
-  /* About Our Stroy Section */
+  /* About Our Story Section */
   .aos {
     height: 100%;
   }

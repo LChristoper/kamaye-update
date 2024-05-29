@@ -85,23 +85,27 @@ if (influencersOdometer) {
 }
 
 // Horizontally Scroll
-gsap.registerPlugin(ScrollTrigger);
+if (typeof gsap !== 'undefined' && gsap.registerPlugin && typeof ScrollTrigger !== 'undefined') {
+  gsap.registerPlugin(ScrollTrigger);
 
-const horizontalSectionWidth = document.querySelector(".wrd").scrollWidth;
+  const horizontalSectionWidth = document.querySelector(".wrd").scrollWidth;
 
-gsap.to(".wrd", {
-  x: () =>
-    -(horizontalSectionWidth - document.documentElement.clientWidth) + "px",
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".wrd",
-    pin: true,
-    start: "top top",
-    end: () =>
-      "+=" + (horizontalSectionWidth - document.documentElement.clientWidth),
-    scrub: 0.5, // Mengurangi nilai scrub untuk mengurangi sensitivitas
-  },
-});
+  gsap.to(".wrd", {
+    x: () =>
+      -(horizontalSectionWidth - document.documentElement.clientWidth) + "px",
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".wrd",
+      pin: true,
+      start: "top top",
+      end: () =>
+        "+=" + (horizontalSectionWidth - document.documentElement.clientWidth),
+      scrub: 0.5, // Mengurangi nilai scrub untuk mengurangi sensitivitas
+    },
+  });
+} else {
+  console.log("GSAP or ScrollTrigger is not available");
+}
 
 // Changing Content
 function changeContent(destination) {
@@ -114,6 +118,7 @@ function changeContent(destination) {
           <h5>Know Your<br/><span>Main Objective</span></h5>
           <p>Our strategy and approach will differ based on your needs and objectives.</p>
         </div>
+        <div class="middle-display"></div>
         <div class="right-display">
           <p class="thin">Top of the funnel (TOFU)</p>
           <h4>Brand Awareness</h4>
@@ -195,24 +200,28 @@ function changeContent(destination) {
     });
 }
 
-// Call changeContent with "top" to set it as the default case
-changeContent("top"); 
+document.addEventListener("DOMContentLoaded", function () {
+  const contentDisplay = document.querySelector(".aec-content-display");
+  if (contentDisplay) {
+    changeContent("top");
+  }
+});
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Select all funnel containers
-  const funnels = document.querySelectorAll(
-    ".aec-selector .awareness-container, .aec-selector .engagement-container, .aec-selector .conversion-container"
-  );
+  const funnels = document.querySelectorAll(".aec-selector .awareness-container, .aec-selector .engagement-container, .aec-selector .conversion-container");
 
-  // Set initial state
   setInitialState(funnels);
 
   funnels.forEach((funnel) => {
     funnel.addEventListener("click", function () {
       // Reset opacity for all funnels
-      funnels.forEach((f) => (f.style.opacity = 0.2));
-      // Set the clicked funnel's opacity to 1
+      funnels.forEach((f) => {
+        f.style.opacity = 0.2;
+        f.classList.add('bounce'); // Ensure bounce is added when not active
+      });
+      // Set the clicked funnel's opacity to 1 and remove bounce
       this.style.opacity = 1;
+      this.classList.remove('bounce');
     });
   });
 
@@ -220,6 +229,27 @@ document.addEventListener("DOMContentLoaded", function () {
     // Set the first funnel's opacity to 1 and the rest to 0.2
     funnels.forEach((funnel, index) => {
       funnel.style.opacity = index === 0 ? 1 : 0.2;
+      if (index === 0) {
+        funnel.classList.remove('bounce');
+      } else {
+        funnel.classList.add('bounce');
+      }
     });
   }
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.5 // Trigger ketika 50% dari elemen masuk ke dalam viewport
+  });
+
+  const contactContainer = document.querySelector('.contact-us-container');
+  observer.observe(contactContainer);
 });
