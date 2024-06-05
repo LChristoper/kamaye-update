@@ -253,3 +253,5 @@ document.addEventListener('DOMContentLoaded', function() {
   const contactContainer = document.querySelector('.contact-us-container');
   observer.observe(contactContainer);
 });
+
+// Swiper Case Studies

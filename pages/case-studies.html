@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
     <title>Kamaye</title>
 
     <!-- Icon Kamaye -->
@@ -14,231 +17,65 @@
 
     <!-- Style CSS -->
     <link rel="stylesheet" href="../css/style.css" />
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
   </head>
   <body>
     <!-- Navbar Start -->
-    <nav class="navbar active">
-      <a href="../index.html" class="navbar-logo">
+    <nav class="navbar" id="navbar">
+      <a href="../" class="navbar-logo">
         <img
-          src="../assets/img/kamaye-logo.png"
+          src="../assets/img/kamaye-logo.svg"
           alt="Kamaye Logo"
           class="logo"
         />
       </a>
-      <div class="navbar-nav active">
-        <a href="about-us.html">About</a>
-        <a href="our-services.html">Our Services</a>
-        <a href="#" style="cursor: default" class="line-navbar">
-          <div class="block"></div>
-        </a>
-        <a href="pages/case-studies.html"><span>Case Studies</span></a>
-        <a href="#" class="none">
-          <button class="contact">CONTACT US</button>
-        </a>
+      <div class="navbar-nav">
+        <ul>
+          <li><a href="about-us.html">About</a></li>
+          <li><a href="our-services.html">Our Services</a></li>
+          <li><div class="block"></div></li>
+          <li>
+            <a href="case-studies.html"><span>Case Studies</span></a>
+          </li>
+          <li><a href="#contact" class="get-started">Get Started</a></li>
+        </ul>
       </div>
-      <div class="navbar-lang">
-        <a href="" class="use">EN</a>
-        <a href="" class="not-use">IDN</a>
-      </div>
-      <div class="navbar-extra">
-        <a href="#" id="hamburger-menu">
-          <svg
-            width="24"
-            height="24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <use href="../assets/img/feather-sprite.svg#menu" />
-            <use href="../assets/img/feather-sprite.svg#x" />
-          </svg>
-        </a>
-      </div>
+      <label class="hamburger">
+        <input type="checkbox" />
+        <svg viewBox="0 0 32 32" id="hamburger-menu">
+          <path
+            class="line line-top-bottom"
+            d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
+          ></path>
+          <path class="line" d="M7 16 27 16"></path>
+        </svg>
+      </label>
     </nav>
+
     <!-- Navbar End -->
 
-    <!-- Hero Section Start -->
-    <section class="hero1">
-      <div class="container">
-        <lottie-player
-          class="kamaye-video"
-          src="../assets/video/hero.json"
-          background="transparent"
-          speed="1"
-          loop
-          autoplay
-        ></lottie-player>
-      </div>
-    </section>
+    <!-- Hero Section Start-->
+    <!-- <section class="hero-services">
+      <video class="hero-services-bg desktop" autoplay loop muted>
+        <source src="../assets/video/our-services/hero-services-bg.mp4" />
+      </video>
+      
+      <video class="hero-services-bg mobile" autoplay loop muted>
+        <source src="../assets/video/our-services/hero-services-bg-mobile.mp4" />
+      </video>
+    </section> -->
+    <!-- Hero Section End-->
 
     <!-- Case Studies Section Start -->
-    <section class="case-studies" id="case-studies">
-      <!-- Filter Start -->
-      <h2>FILTER CASE STUDIES BY:</h2>
-      <div class="filter-buttons">
-        <button class="filter-all btn active" onclick="filterSelection('all')">
-          ALL
-        </button>
-        <button class="filter-beauty btn" onclick="filterSelection('beauty')">
-          BEAUTY
-        </button>
-        <button class="filter-food btn" onclick="filterSelection('food')">
-          FOOD
-        </button>
-        <button
-          class="filter-financial-education"
-          onclick="filterSelection('financial-education')"
-        >
-          FINANCIAL EDUCATION
-        </button>
-        <button class="filter-cooking btn" onclick="filterSelection('cooking')">
-          COOKING
-        </button>
-        <button
-          class="filter-entertainment btn"
-          onclick="filterSelection('entertainment')"
-        >
-          ENTERTAINMENT
-        </button>
-        <button class="filter-healty btn" onclick="filterSelection('healthy')">
-          HEALTHY
-        </button>
-      </div>
-      <!-- Filter End -->
-
-      <div class="card-container">
-        <div class="case-studies-card filter-healthy-card">
-          <a href="#">
-            <img src="../assets/img/case-studies/1.png" alt="" />
-          </a>
-          <div class="category">
-            <button class="healthy">HEALTHY</button>
-          </div>
-        </div>
-        <div class="case-studies-card filter food">
-          <a href="#">
-            <img src="../assets/img/case-studies/2.png" alt="" />
-          </a>
-          <div class="category">
-            <button class="food">FOOD</button>
-          </div>
-        </div>
-        <div class="case-studies-card filter healthy">
-          <a href="#">
-            <img src="../assets/img/case-studies/3.png" alt="" />
-          </a>
-          <div class="category">
-            <button class="healthy">HEALTHY</button>
-          </div>
-        </div>
-        <div class="case-studies-card filter food">
-          <a href="#">
-            <img src="../assets/img/case-studies/4.png" alt="" />
-          </a>
-          <div class="category">
-            <button class="food">FOOD</button>
-          </div>
-        </div>
-        <div class="case-studies-card filter entertainment">
-          <a href="#">
-            <img src="../assets/img/case-studies/5.png" alt="" />
-          </a>
-          <div class="category">
-            <button class="entertainment">ENTERTAINMENT</button>
-          </div>
-        </div>
-      </div>
+    <section class="cs">
     </section>
-
     <!-- Case Studies Section End -->
-
-    <div class="clients-container">
-      <div
-        class="clients-logo"
-        style="background-color: #fff; border: 2px solid #000"
-      >
-        <!-- Clients Section Start -->
-        <div class="clients-logo-slide" style="mix-blend-mode: difference">
-          <img src="../assets/img/clients/AIRWICK.png" alt="" />
-          <img src="../assets/img/clients/AKULAKU.png" alt="" />
-          <img src="../assets/img/clients/BAKMI MEWAH.png" alt="" />
-          <img src="../assets/img/clients/BNI46.png" alt="" />
-          <img src="../assets/img/clients/BUKALAPAK.png" alt="" />
-          <img src="../assets/img/clients/CHICKRO.png" alt="" />
-          <img src="../assets/img/clients/CHOCOLATOS.png" alt="" />
-          <img src="../assets/img/clients/CODASHOP.png" alt="" />
-          <img src="../assets/img/clients/DELICO.png" alt="" />
-          <img src="../assets/img/clients/DETTOL.png" alt="" />
-          <img src="../assets/img/clients/DEXAMEDICA.png" alt="" />
-          <img src="../assets/img/clients/FIZZO.png" alt="" />
-          <img src="../assets/img/clients/GAMEQOO.png" alt="" />
-          <img src="../assets/img/clients/garudafood.png" alt="" />
-          <img src="../assets/img/clients/GERY SALUT.png" alt="" />
-          <img src="../assets/img/clients/HALODODC.png" alt="" />
-          <img src="../assets/img/clients/HERBA ASIMOR.png" alt="" />
-          <img src="../assets/img/clients/INTI PRIMA RASA.png" alt="" />
-          <img src="../assets/img/clients/MAYORA.png" alt="" />
-          <img src="../assets/img/clients/NANOVEST.png" alt="" />
-          <img src="../assets/img/clients/NUTRIFFOD.png" alt="" />
-          <img src="../assets/img/clients/NUTRISARI.png" alt="" />
-          <img src="../assets/img/clients/OXYVIT.png" alt="" />
-          <img src="../assets/img/clients/PERFECTVIT.png" alt="" />
-          <img src="../assets/img/clients/RECKITT.png" alt="" />
-          <img src="../assets/img/clients/SAVIOR.png" alt="" />
-          <img src="../assets/img/clients/SHOPEE.png" alt="" />
-          <img src="../assets/img/clients/SHOPEEFOOD.png" alt="" />
-          <img src="../assets/img/clients/SHOPEEPAY.png" alt="" />
-          <img src="../assets/img/clients/STIMUNO.png" alt="" />
-          <img src="../assets/img/clients/SWISSE.png" alt="" />
-          <img src="../assets/img/clients/TELKOMSEL REDI.png" alt="" />
-          <img src="../assets/img/clients/TUMBUH LAB.png" alt="" />
-          <img src="../assets/img/clients/VANISH.png" alt="" />
-          <img src="../assets/img/clients/VISVAL.png" alt="" />
-          <img src="../assets/img/clients/WEBTOON.png" alt="" />
-        </div>
-        <div class="clients-logo-slide" style="mix-blend-mode: difference">
-          <img src="../assets/img/clients/AIRWICK.png" alt="" />
-          <img src="../assets/img/clients/AKULAKU.png" alt="" />
-          <img src="../assets/img/clients/BAKMI MEWAH.png" alt="" />
-          <img src="../assets/img/clients/BNI46.png" alt="" />
-          <img src="../assets/img/clients/BUKALAPAK.png" alt="" />
-          <img src="../assets/img/clients/CHICKRO.png" alt="" />
-          <img src="../assets/img/clients/CHOCOLATOS.png" alt="" />
-          <img src="../assets/img/clients/CODASHOP.png" alt="" />
-          <img src="../assets/img/clients/DELICO.png" alt="" />
-          <img src="../assets/img/clients/DETTOL.png" alt="" />
-          <img src="../assets/img/clients/DEXAMEDICA.png" alt="" />
-          <img src="../assets/img/clients/FIZZO.png" alt="" />
-          <img src="../assets/img/clients/GAMEQOO.png" alt="" />
-          <img src="../assets/img/clients/garudafood.png" alt="" />
-          <img src="../assets/img/clients/GERY SALUT.png" alt="" />
-          <img src="../assets/img/clients/HALODODC.png" alt="" />
-          <img src="../assets/img/clients/HERBA ASIMOR.png" alt="" />
-          <img src="../assets/img/clients/INTI PRIMA RASA.png" alt="" />
-          <img src="../assets/img/clients/MAYORA.png" alt="" />
-          <img src="../assets/img/clients/NANOVEST.png" alt="" />
-          <img src="../assets/img/clients/NUTRIFFOD.png" alt="" />
-          <img src="../assets/img/clients/NUTRISARI.png" alt="" />
-          <img src="../assets/img/clients/OXYVIT.png" alt="" />
-          <img src="../assets/img/clients/PERFECTVIT.png" alt="" />
-          <img src="../assets/img/clients/RECKITT.png" alt="" />
-          <img src="../assets/img/clients/SAVIOR.png" alt="" />
-          <img src="../assets/img/clients/SHOPEE.png" alt="" />
-          <img src="../assets/img/clients/SHOPEEFOOD.png" alt="" />
-          <img src="../assets/img/clients/SHOPEEPAY.png" alt="" />
-          <img src="../assets/img/clients/STIMUNO.png" alt="" />
-          <img src="../assets/img/clients/SWISSE.png" alt="" />
-          <img src="../assets/img/clients/TELKOMSEL REDI.png" alt="" />
-          <img src="../assets/img/clients/TUMBUH LAB.png" alt="" />
-          <img src="../assets/img/clients/VANISH.png" alt="" />
-          <img src="../assets/img/clients/VISVAL.png" alt="" />
-          <img src="../assets/img/clients/WEBTOON.png" alt="" />
-        </div>
-        <!-- Clients Section End -->
-      </div>
-    </div>
 
     <!-- Javascript-->
     <script src="../js/script.js"></script>
