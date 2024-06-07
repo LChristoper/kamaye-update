@@ -255,3 +255,46 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Swiper Case Studies
+const swiper = new Swiper('.swiper', {
+  loop: true,
+
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  breakpoints: {
+    430: {
+      slidesPerView: 1,
+      spaceBetween: 20
+    },
+    430: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    }
+  }
+});
+
+// Modal Box
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == document.getElementById("myModal")) {
+    closeModal();
+  }
+}
