@@ -293,6 +293,14 @@ function openModal(imageSrc) {
 }
 
 function closeModal() {
-  var modal = document.getElementById("Modal");
-  modal.style.display = "none";
+  var modal = document.getElementById('Modal');
+  modal.style.display = 'none';
+}
+
+// Fungsi untuk menutup modal jika klik diluar modal
+window.onclick = function(event) {
+  var modal = document.getElementById('Modal');
+  if (event.target == modal) {
+    closeModal();
+  }
 }

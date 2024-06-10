@@ -643,6 +643,9 @@
   <!-- Lottie -->
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" type="module"></script>
 
+  <!-- Lenis -->
+  <script src="https://unpkg.com/lenis@1.1.2/dist/lenis.min.js"></script>
+
   <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
@@ -650,6 +653,33 @@
   <!-- Feather Icons -->
   <script>
     feather.replace();
+  </script>
+
+  <script>
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+      direction: 'horizontal', // vertical, horizontal
+      gestureDirection: 'horizontal', // vertical, horizontal, both
+      smooth: true,
+      smoothWheel: true,
+      mouseMultiplier: 0.5,
+      smoothTouch: false,
+      touchMultiplier: 1.5,
+      infinite: false,
+    })
+
+    //get scroll value
+    lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => {
+      console.log({ scroll, limit, velocity, direction, progress })
+    })
+
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
   </script>
 
   <!-- My JavaScript -->
