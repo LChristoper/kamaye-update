@@ -285,16 +285,14 @@ const swiper = new Swiper('.swiper', {
 });
 
 // Modal Box
-function openModal() {
-  document.getElementById("myModal").style.display = "block";
+function openModal(imageSrc) {
+  var modal = document.getElementById("Modal");
+  var modalImg = document.getElementById("modalImage");
+  modal.style.display = "block";
+  modalImg.src = imageSrc;
 }
 
 function closeModal() {
-  document.getElementById("myModal").style.display = "none";
-}
-
-window.onclick = function(event) {
-  if (event.target == document.getElementById("myModal")) {
-    closeModal();
-  }
+  var modal = document.getElementById("Modal");
+  modal.style.display = "none";
 }
