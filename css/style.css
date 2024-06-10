@@ -775,6 +775,13 @@ h2 {
   z-index: -1;
 }
 
+.wrd .panel.panel2.desktop {
+  background-image: url(../assets/img/home-page/2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .wrd .panel.panel2.desktop .panel2-container {
   padding: 7rem 5%;
   font-family: "TT-Hoves-Thin", sans-serif;
@@ -828,6 +835,13 @@ h2 {
 
 .wrd .panel.panel2.mobile {
   display: none;
+}
+
+.wrd .panel.panel3.desktop {
+  background-image: url(../assets/img/home-page/3.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .wrd .panel.panel3.desktop p {
@@ -1157,6 +1171,7 @@ h2 {
 .engagement-container,
 .conversion-container {
   position: relative;
+  cursor: pointer;
 }
 
 .aec .aec-selector .awareness-container img {
@@ -1337,10 +1352,6 @@ h2 {
   width: 60%;
 }
 
-.aec img {
-  cursor: pointer;
-}
-
 @keyframes slideInRightToLeft {
   from {
     opacity: 0;
@@ -1378,8 +1389,8 @@ h2 {
 }
 
 .htw .htw-container {
+  display: flex;
   height: 100%;
-  margin-bottom: -0.5vw;
 }
 
 .htw .htw-container .htw-video {
