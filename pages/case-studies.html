@@ -17,48 +17,9 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-  <style>
-    /* Case Studies Section */
-    .swiper {
-      margin: 5% 0;
-      padding: 0 40px;
-    }
-
-    .swiper-slide img {
-      width: 100%;
-      height: auto;
-      transition: transform 0.3s ease;
-    }
-
-    .swiper-slide img:hover {
-      transform: scale(1.05);
-    }
-
-    .swiper-slide img:active {
-      transform: scale(0.95);
-    }
-
-    .swiper-button-prev,
-    .swiper-button-next {
-      color: #000;
-      border-radius: 50%;
-      transition: transform 0.3s ease;
-    }
-
-    .swiper-button-prev:hover,
-    .swiper-button-next:hover {
-      transform: scale(1.1);
-    }
-
-    .swiper-button-prev:active,
-    .swiper-button-next:active {
-      transform: scale(0.9);
-    }
-  </style>
-
 </head>
 
-<body>
+<body style=" background-color: #FFcccc;">
   <!-- Navbar Start -->
   <nav class="navbar" id="navbar">
     <a href="../" class="navbar-logo">
@@ -74,7 +35,7 @@
         <li>
           <a href="case-studies.html"><span>Case Studies</span></a>
         </li>
-        <li><a href="#contact" class="get-started">Get Started</a></li>
+        <li><a href="#contact" class="contact-us">CONTACT US!</a></li>
       </ul>
     </div>
     <label class="hamburger">
@@ -105,8 +66,11 @@
   <!-- Solving Your Marketing Challenges Section Start -->
   <section class="symc">
     <div class="symc-container">
-      <img class="symc-bg" src="../assets/img/case-studies/symc-bg.jpg" alt="">
-      <div class="symc-wrapper">
+      <img class="symc-bg desktop" src="../assets/img/case-studies/symc-bg.jpg" alt="">
+      <img class="symc-bg mobile" src="../assets/img/case-studies/symc-bg-mobile.jpg" alt="">
+
+      <!-- Desktop Version -->
+      <div class="symc-wrapper-desktop">
         <h2>Solving <span>Your Marketing</span> Challenges</h2>
         <div class="symc-flex-container">
           <div class="graph-container">
@@ -130,6 +94,35 @@
             <h3>Answering Your <br /> Problem</h3>
             <p>Our long-running Influencer Marketing service made us understand the best solution problems and
               challanges in running your campaign. With that in mind, we'll help you get your message across</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Version -->
+      <div class="symc-wrapper-mobile">
+        <h2>Solving <span>Your Marketing</span> Challenges</h2>
+        <div class="symc-flex-container">
+          <div class="graph-container">
+            <div class="graph">
+              <lottie-player class="graph-lottie" src="../assets/video/graph_1.json" background="transparent" speed="1"
+                autoplay></lottie-player>
+            </div>
+            <div class="graph">
+              <lottie-player class="graph-lottie" src="../assets/video/graph_2.json" background="transparent" speed="1"
+                autoplay></lottie-player>
+            </div>
+            <div class="graph">
+              <lottie-player class="graph-lottie" src="../assets/video/graph_3.json" background="transparent" speed="1"
+                autoplay></lottie-player>
+            </div>
+          </div>
+          <div class="ayp">
+            <h3>Answering Your <br /> Problem</h3>
+            <p>Our long-running Influencer Marketing service made us understand the best solution problems and
+              challanges in running your campaign. With that in mind, we'll help you get your message across</p>
+          </div>
+          <div class="woman">
+            <img src="../assets/img/case-studies/cs-woman.png" alt="">
           </div>
         </div>
       </div>
@@ -270,48 +263,11 @@
   <!-- Modal Box Start -->
   <div id="Modal" class="modal">
     <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
+      <!-- <span class="close" onclick="closeModal()">&times;</span> -->
       <img id="modalImage" src="" alt="Case Study Image">
     </div>
   </div>
   <!-- Modal Box End -->
-
-  <!-- Case Studies Section Start -->
-  <!-- <section class="cs">
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="../assets/img/case-studies/cs1.jpg" alt="" onclick="openModal()">
-          </div>
-          <div class="swiper-slide">
-            <img src="../assets/img/case-studies/cs2.jpg" alt="" onclick="openModal()">
-          </div>
-          <div class="swiper-slide">
-            <img src="../assets/img/case-studies/cs3.jpg" alt="" onclick="openModal()">
-          </div>
-          <div class="swiper-slide">
-            <img src="../assets/img/case-studies/cs4.jpg" alt="" onclick="openModal()">
-          </div>
-          <div class="swiper-slide">
-            <img src="../assets/img/case-studies/cs5.jpg" alt="" onclick="openModal()">
-          </div>
-          <div class="swiper-slide">
-            <img src="../assets/img/case-studies/cs6.jpg" alt="" onclick="openModal()">
-          </div>
-          <div class="swiper-slide">
-            <img src="../assets/img/case-studies/cs7.jpg" alt="" onclick="openModal()">
-          </div>
-        </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-      </div>
-    </section> -->
-  <!-- Case Studies Section Start -->
-
-
-
-  <!-- Case Studies Section End -->
 
   <!-- How To Work Section Start -->
   <section class="htw">
@@ -395,16 +351,15 @@
       </div>
       <div class="navigation-container">
         <ul>
-          <li><a href="#">HOME</a></li>
-          <li><a href="#">ABOUT</a></li>
-          <li><a href="#">NEWS</a></li>
-          <li><a href="#">CASE STUDIES</a></li>
+          <li><a href="../index.html">HOME</a></li>
+          <li><a href="about-us.html">ABOUT</a></li>
+          <li><a href="our-services.html">OUR SERVICES</a></li>
+          <li><a href="case-studies.html">CASE STUDIES</a></li>
         </ul>
         <ul>
           <li><a href="#">SERVICES</a></li>
           <li>Influencer Database</li>
           <li>Influencer Marketing</li>
-          <li>Talent Management</li>
         </ul>
       </div>
     </div>

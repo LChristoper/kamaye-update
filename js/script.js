@@ -239,7 +239,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -252,36 +252,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const contactContainer = document.querySelector('.contact-us-container');
   observer.observe(contactContainer);
-});
-
-// Swiper Case Studies
-const swiper = new Swiper('.swiper', {
-  loop: true,
-
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  breakpoints: {
-    430: {
-      slidesPerView: 1,
-      spaceBetween: 20
-    },
-    430: {
-      slidesPerView: 2,
-      spaceBetween: 20
-    },
-    1024: {
-      slidesPerView: 3,
-      spaceBetween: 30
-    }
-  }
 });
 
 // Modal Box
@@ -298,9 +268,24 @@ function closeModal() {
 }
 
 // Fungsi untuk menutup modal jika klik diluar modal
-window.onclick = function(event) {
+window.onclick = function (event) {
   var modal = document.getElementById('Modal');
   if (event.target == modal) {
     closeModal();
   }
 }
+
+// Testimonials Swiper
+const mySwiper = new Swiper('.mySwiper', {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  loop: true,
+  autoplay: {
+    delay: 8000,  // Jeda waktu 5 detik
+    disableOnInteraction: false,  // Autoplay tidak akan berhenti ketika interaksi pengguna
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+});
