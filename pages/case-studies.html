@@ -365,6 +365,11 @@
     </div>
   </footer>
   <!-- Footer Section End - ->
+    
+    
+  <!-- Javascript  -->
+  <!-- Scroll Reveal -->
+  <script src="https://unpkg.com/scrollreveal"></script>
 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -372,12 +377,108 @@
   <!-- Lottie -->
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" type="module"></script>
 
-  <!-- Javascript-->
+  <!-- My Javascript-->
   <script src="../js/script.js"></script>
 
   <!-- Feather Icons -->
   <script>
     feather.replace();
+
+    // Reveal Animation
+    ScrollReveal().reveal('.reveal-bottom', {
+      duration: 2000,
+      origin: 'bottom',
+      easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',
+      distance: '50px',
+      useDelay: 'onload',
+      delay: 300,
+    });
+
+    ScrollReveal().reveal('.reveal-bottom-2', {
+      duration: 2000,
+      origin: 'bottom',
+      easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',
+      distance: '50px',
+      useDelay: 'onload',
+      delay: 300,
+      interval: 200
+    });
+
+    ScrollReveal().reveal('.reveal-bottom-3', {
+      duration: 2000,
+      origin: 'bottom',
+      easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',
+      distance: '50px',
+      useDelay: 'onload',
+      delay: 300,
+      interval: 400
+    });
+
+
+    ScrollReveal().reveal('.reveal-left', {
+      duration: 2000,
+      origin: 'left',
+      easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',
+      distance: '50px',
+      useDelay: 'onload',
+      delay: 300,
+    });
+
+    ScrollReveal().reveal('.reveal-left-2', {
+      duration: 2000,
+      origin: 'left',
+      easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',
+      distance: '50px',
+      useDelay: 'onload',
+      delay: 300,
+      interval: 200
+    });
+
+    ScrollReveal().reveal('.reveal-right', {
+      duration: 2000,
+      origin: 'right',
+      easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',
+      distance: '50px',
+      useDelay: 'onload',
+      delay: 300,
+    });
+
+    ScrollReveal().reveal('.reveal-right-2', {
+      duration: 2000,
+      origin: 'right',
+      easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',
+      distance: '200px',
+      useDelay: 'onload',
+      delay: 300,
+      interval: 200
+    });
+
+    ScrollReveal().reveal('.reveal-right-3', {
+      duration: 2000,
+      origin: 'right',
+      easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',
+      distance: '400px',
+      useDelay: 'onload',
+      delay: 300,
+      interval: 400
+    });
+
+    ScrollReveal().reveal('.contact-us-container', {
+      duration: 2000,
+      origin: 'right',
+      easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',
+      opacity: 0,
+      distance: '50px',
+      useDelay: 'onload',
+      delay: 400,
+      interval: 3000;
+      beforeReveal: function (domEl) {
+        domEl.classList.add('visible'); // Tambahkan class 'visible' untuk menghilangkan blur
+      },
+      beforeReset: function (domEl) {
+        domEl.classList.remove('visible'); // Hapus class 'visible' untuk mengembalikan blur
+      }
+    });
   </script>
 </body>
 

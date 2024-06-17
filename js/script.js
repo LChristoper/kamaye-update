@@ -84,6 +84,24 @@ if (influencersOdometer) {
   observer.observe(influencersOdometer);
 }
 
+// Graph Reveal Animation Observer
+document.addEventListener("DOMContentLoaded", function () {
+  var oiGraphLottie = document.querySelectorAll('.oi-graph-lottie');
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.play(); // Memulai animasi Lottie
+      } else {
+        entry.target.stop(); // Menghentikan animasi Lottie
+      }
+    });
+  }, { threshold: 0.5 }); // Trigger ketika 50% dari elemen masuk ke dalam viewport
+
+  oiGraphLottie.forEach(lottie => {
+    observer.observe(lottie); // Mengamati setiap elemen Lottie
+  });
+});
+
 // Horizontally Scroll
 if (typeof gsap !== 'undefined' && gsap.registerPlugin && typeof ScrollTrigger !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
@@ -276,16 +294,23 @@ window.onclick = function (event) {
 }
 
 // Testimonials Swiper
-const mySwiper = new Swiper('.mySwiper', {
-  slidesPerView: 1,
-  spaceBetween: 10,
-  loop: true,
-  autoplay: {
-    delay: 8000,  // Jeda waktu 5 detik
-    disableOnInteraction: false,  // Autoplay tidak akan berhenti ketika interaksi pengguna
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
+document.addEventListener('DOMContentLoaded', function () {
+  const swiperContainer = document.querySelector('.mySwiper');
+  if (swiperContainer) {
+    const mySwiper = new Swiper('.mySwiper', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      loop: true,
+      autoplay: {
+        delay: 8000,  // Jeda waktu 8 detik
+        disableOnInteraction: false,  // Autoplay tidak akan berhenti ketika interaksi pengguna
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  } else {
+    console.log('Swiper container not found, skipping initialization.');
+  }
 });
