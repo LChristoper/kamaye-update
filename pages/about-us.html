@@ -59,8 +59,8 @@
   <section class="hero-about">
     <div class="container">
       <div class="woman-about-container">
-        <lottie-player class="woman-about" src="../assets/video/about-us/woman.json" background="transparent" speed="1"
-          loop autoplay></lottie-player>
+        <lottie-player class="woman-about reveal-right" src="../assets/video/about-us/woman.json"
+          background="transparent" speed="1" loop autoplay></lottie-player>
       </div>
 
       <video class="hero-about-bg desktop" autoplay loop muted>
@@ -76,7 +76,7 @@
   <!-- Our Story Section Start -->
   <section class="aos">
     <div class="container">
-      <div class="aos-container">
+      <div class="aos-container reveal-left-2">
         <h2>About Our Story</h2>
         <h3>Your Trusted Partner For Business</h3>
         <p>
@@ -97,7 +97,7 @@
           convey itsmoving progress.
         </p>
       </div>
-      <div class="bridging-container">
+      <div class="bridging-container reveal-right-2">
         <div class="gradient-container">
           <lottie-player class="background-gradient" src="../assets/video/about-us/gradient1.json"
             background="transparent" speed="1" loop autoSize resizeMode="center" style="width: 1000px"
@@ -110,7 +110,7 @@
           and people together.
         </p>
       </div>
-      <div class="progressing-container">
+      <div class="progressing-container reveal-left-2">
         <div class="gradient-container">
           <lottie-player class="background-gradient" src="../assets/video/about-us/gradient3.json"
             background="transparent" speed="1" loop autoSize resizeMode="center" style="width: 1000px"
@@ -123,7 +123,7 @@
           directly the marketing industry and business clients.
         </p>
       </div>
-      <div class="blessing-container">
+      <div class="blessing-container reveal-right-2">
         <div class="gradient-container">
           <lottie-player class="background-gradient" src="../assets/video/about-us/gradient4.json"
             background="transparent" speed="1" loop autoSize resizeMode="center" style="width: 1000px"
@@ -253,7 +253,7 @@
 
   <!-- Brand Voice Section Start -->
   <section class="bv">
-    <div class="container">
+    <div class="container reveal-left">
       <img src="../assets/img/kamaye-logo.svg" alt="" />
       <h2>Brand Voice</h2>
       <h3>Savvy & Optimistic</h3>
@@ -268,8 +268,8 @@
         Kamaye treats everyone positively and communicates effectively.
       </p>
     </div>
-    <lottie-player class="bv-lottie" src="../assets/video/about-us/BRAND_VOICE.json" background="transparent" speed="1"
-      loop autoplay></lottie-player>
+    <lottie-player class="bv-lottie reveal-bottom-2" src="../assets/video/about-us/BRAND_VOICE.json"
+      background="transparent" speed="1" loop autoplay></lottie-player>
   </section>
   <!-- Brand Voice Section End -->
 
@@ -479,7 +479,7 @@
       distance: '50px',
       useDelay: 'onload',
       delay: 400,
-      interval: 3000;
+      interval: 3000,
       beforeReveal: function (domEl) {
         domEl.classList.add('visible'); // Tambahkan class 'visible' untuk menghilangkan blur
       },

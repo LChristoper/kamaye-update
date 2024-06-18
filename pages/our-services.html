@@ -84,29 +84,30 @@
       <source src="../assets/video/our-services/wws-bg-mobile.mp4" />
     </video>
     <div class="container">
-      <h2>What We Served</h2>
-      <p>Focusing on Social Media Influencer Management, through the voice of support, conversations, exchanging stroies
+      <h2 class="reveal-bottom">What We Served</h2>
+      <p class="reveal-bottom">Focusing on Social Media Influencer Management, through the voice of support,
+        conversations, exchanging stroies
         and making actions together in the everchanging digital realm while leaving a trace of it's winning as a
         measurable Impact.</p>
       <div class="iw-container">
         <div class="inma">
-          <h3>Influencer Marketing</h3>
+          <h3 class="reveal-left-2">Influencer Marketing</h3>
           <ul>
-            <li>Plan Your Marketing Campaign</li>
-            <li>Strategize Campaign</li>
-            <li>Campaign Execute</li>
-            <li>Campaign Track and Measure</li>
-            <li>Campaign Analyzing</li>
-            <li>Campaign Evalution</li>
+            <li class="reveal-left-2">Plan Your Marketing Campaign</li>
+            <li class="reveal-left-2">Strategize Campaign</li>
+            <li class="reveal-left-2">Campaign Execute</li>
+            <li class="reveal-left-2">Campaign Track and Measure</li>
+            <li class="reveal-left-2">Campaign Analyzing</li>
+            <li class="reveal-left-2">Campaign Evalution</li>
           </ul>
         </div>
         <div class="wrid">
-          <h3>Wide Range Influencer Database</h3>
+          <h3 class="reveal-left-3">Wide Range Influencer Database</h3>
           <ul>
-            <li>Growing Influencer Database Over 5000</li>
-            <li>Matchmake Your Perfect Fit Influencer</li>
-            <li>All Categories Influencer Covered</li>
-            <li>Influencer All Across Indonesia</li>
+            <li class="reveal-left-3">Growing Influencer Database Over 5000</li>
+            <li class="reveal-left-3">Matchmake Your Perfect Fit Influencer</li>
+            <li class="reveal-left-3">All Categories Influencer Covered</li>
+            <li class="reveal-left-3">Influencer All Across Indonesia</li>
           </ul>
         </div>
       </div>
@@ -116,11 +117,11 @@
 
   <!-- Brand To People Section Start -->
   <section class="btp">
-    <div class="container">
+    <div class="container reveal-bottom">
       <img src="../assets/img/our-services/brand-to-people.png" alt="">
     </div>
     <div class="trusted-wrapper">
-      <h4 class="">TRUSTED BY <span><span class="brands-odometer"></span> + BRANDS</span></h4>
+      <h4 class="reveal-bottom-2">TRUSTED BY <span><span class="brands-odometer"></span> + BRANDS</span></h4>
       <div class="clients-container">
         <div class="clients-logo">
           <!-- Clients Section Start -->
@@ -319,7 +320,7 @@
 
   <!-- How To Work Section Start -->
   <section class="htw">
-    <div class="contact-us-container visible">
+    <div class="contact-us-container">
       <div div class="contact-woman">
         <img src="../assets/img/woman.png" alt="">
       </div>
@@ -376,8 +377,6 @@
       <video class="htw-video mobile" autoplay muted>
         <source src="../assets/video/our-services/work_with_us_services_mobile.mp4">
       </video>
-
-
   </section>
   <!-- How It Work Section End -->
 
@@ -477,6 +476,16 @@
       interval: 200
     });
 
+    ScrollReveal().reveal('.reveal-left-3', {
+      duration: 2000,
+      origin: 'left',
+      easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',
+      distance: '50px',
+      useDelay: 'onload',
+      delay: 300,
+      interval: 400
+    });
+
     ScrollReveal().reveal('.reveal-right', {
       duration: 2000,
       origin: 'right',
@@ -510,17 +519,10 @@
       duration: 2000,
       origin: 'right',
       easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',
-      opacity: 0,
       distance: '50px',
       useDelay: 'onload',
-      delay: 400,
-      interval: 3000;
-      beforeReveal: function (domEl) {
-        domEl.classList.add('visible'); // Tambahkan class 'visible' untuk menghilangkan blur
-      },
-      beforeReset: function (domEl) {
-        domEl.classList.remove('visible'); // Hapus class 'visible' untuk mengembalikan blur
-      }
+      delay: 300,
+      interval: 3000,
     });
   </script>
 

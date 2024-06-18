@@ -142,7 +142,7 @@ h2 {
 /* Navbar Section */
 .navbar {
   position: fixed;
-  min-width: 100vw;
+  min-width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1434,7 +1434,7 @@ h2 {
 }
 
 .htw .contact-us-container.visible {
-  /* opacity: 0; */
+  opacity: 1;
   filter: blur(0);
 }
 
@@ -1601,7 +1601,7 @@ footer .footer-container .navigation-container ul li {
   margin-right: 3rem;
 }
 
-footer .footer-container .navigation-container ul li:hover {
+footer .footer-container .navigation-container ul:first-child li:hover {
   color: var(--jade_android);
 }
 
@@ -1862,7 +1862,7 @@ footer .footer-container .navigation-container a:hover {
 /* Hero Section */
 .hero-services .hero-services-bg {
   width: 100%;
-  /* margin-bottom: -0.5vw; */
+  display: flex;
 }
 
 .hero-services .hero-services-bg.mobile {
@@ -1871,7 +1871,8 @@ footer .footer-container .navigation-container a:hover {
 
 /* What We Served Section */
 .wws {
-  height: 100%;
+  /* height: 100%; */
+  position: relative;
   overflow: hidden;
 }
 
@@ -1926,7 +1927,6 @@ footer .footer-container .navigation-container a:hover {
 /* Brand To People Section */
 .btp {
   width: 100%;
-  height: 50%;
   text-align: center;
   z-index: 1;
   animation: change-background 100s infinite;
@@ -2029,7 +2029,7 @@ footer .footer-container .navigation-container a:hover {
 /* Hero Section */
 .hero-case .hero-case-bg {
   width: 100%;
-  margin-bottom: -0.5vw;
+  display: flex;
 }
 
 .hero-case .hero-case-bg.mobile {
@@ -2149,37 +2149,36 @@ footer .footer-container .navigation-container a:hover {
   background-color: var(--amazonian_tangerine);
   color: #fff;
   border-radius: 25px;
-  margin-bottom: 20px;
 }
 
 .opa .opa-first-container .title {
   flex: 1;
-  padding: 3rem;
+  padding: 3vw;
+  padding-right: 0;
 }
 
 .opa .opa-first-container .title h3 {
-  font-size: 2vw;
+  font-size: 1.5vw;
 }
 
 .opa .opa-first-container .title button {
   background-color: var(--discordian_blue);
   color: #fff;
   border: none;
-  padding: 10px 20px;
+  padding: 1vw 2vw;
   cursor: pointer;
   margin: 2rem 0;
-  font-size: 1rem;
+  font-size: 1.5vw;
 }
 
 .opa .opa-first-container .title p {
   width: 50%;
-  font-size: 1rem;
+  font-size: 1.2vw;
   margin-bottom: 20px;
 }
 
 .opa .opa-first-container .cs-img {
   flex: 1;
-  flex-basis: 10rem;
   width: 100%;
   height: auto;
   display: flex;
@@ -2187,7 +2186,8 @@ footer .footer-container .navigation-container a:hover {
 
 .opa .opa-first-container .cs-img img {
   width: 100%;
-  border-radius: 21px;
+  height: auto;
+  border-radius: 20px;
 }
 
 .opa .opa-grid-container {
@@ -3035,7 +3035,7 @@ footer .footer-container .navigation-container a:hover {
   /* About Us Page */
   /* About Our Story Section */
   .aos {
-    height: 100%;
+    height: auto;
   }
 
   .aos .container {
@@ -3159,7 +3159,6 @@ footer .footer-container .navigation-container a:hover {
   /* Our Services Pages */
   /* What We Served Section */
   .wws {
-    height: 100%;
     position: relative;
   }
 
@@ -3173,22 +3172,22 @@ footer .footer-container .navigation-container a:hover {
   }
 
   .wws .container h2 {
-    font-size: 6vw;
+    font-size: 9vw;
   }
 
   .wws .container p {
-    font-size: 2.2vw;
+    font-size: 3.5vw;
     width: 90%;
   }
 
   .wws .container .iw-container {
     margin: 10% 0;
-    margin-left: 25vw;
+    margin-left: 10vw;
     flex-direction: column;
   }
 
   .wws .container .iw-container h3 {
-    font-size: 3.2vw;
+    font-size: 5vw;
   }
 
   .wws .container .iw-container .wrid {
@@ -3196,14 +3195,16 @@ footer .footer-container .navigation-container a:hover {
   }
 
   .wws .container .iw-container ul li {
-    font-size: 2.5vw;
+    font-size: 4.5vw;
     background-size: 3vw;
     padding-left: 4vw;
+    background-size: 5vw;
+    padding-left: 6vw;
   }
 
   /* Testimonial Section */
   .testimonial {
-    height: 100%;
+    height: auto;
   }
 
   .testimonial .testimonial-container {
@@ -3227,13 +3228,13 @@ footer .footer-container .navigation-container a:hover {
   }
 
   .testimonial .testimonial-container .oclwwd-container h2 {
-    font-size: 6vw;
+    font-size: 8vw;
     margin-top: 0;
   }
 
   .testimonial .testimonial-container .oclwwd-container p {
-    font-size: 2.7vw;
-    margin-right: 20vw;
+    font-size: 3.7vw;
+    margin-right: 13vw;
     margin-bottom: 6vw;
   }
 
@@ -3243,6 +3244,7 @@ footer .footer-container .navigation-container a:hover {
     align-items: center;
     text-align: center;
     margin: 10px;
+    margin-top: 20vw;
     padding: 3%;
     background-color: #fff;
     -webkit-box-shadow: 6px 8px 3px 3px rgba(0, 0, 0, 0.2);
@@ -3251,7 +3253,7 @@ footer .footer-container .navigation-container a:hover {
   }
 
   .testimonial .testimonial-container .testimonials-container-mobile .testimonial-wrapper .testimonial-img {
-    width: 40vw;
+    width: 50vw;
     height: 100%;
     margin-right: 1vw;
   }
@@ -3289,12 +3291,16 @@ footer .footer-container .navigation-container a:hover {
 
   /* Case Studies Pages */
   /* Solving Your Marketing Challenges Section */
+  .symc {
+    display: none;
+  }
+
   .symc .symc-container .symc-bg.desktop {
     display: none;
   }
 
   .symc .symc-container .symc-bg.mobile {
-    display: block;
+    display: none;
     position: absolute;
     object-fit: fill;
     z-index: -1;
@@ -3305,7 +3311,7 @@ footer .footer-container .navigation-container a:hover {
   }
 
   .symc .symc-container .symc-wrapper-mobile {
-    display: block;
+    display: none;
     padding: 4% 2% 0 2%;
   }
 
@@ -3341,7 +3347,9 @@ footer .footer-container .navigation-container a:hover {
   }
 
   .opa .opa-first-container .cs-img {
-    flex-basis: 10rem;
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: 10vw;
   }
 
   .opa .opa-grid-container {
@@ -3356,6 +3364,10 @@ footer .footer-container .navigation-container a:hover {
   .opa .opa-grid-container .wrapper .case-details {
     font-size: 2vw;
     padding: 0.5vw 3vw;
+  }
+
+  .opa .opa-grid-container .wrapper .case-details .category {
+    font-size: 1.5vw;
   }
 
   /* How To Work Section */
@@ -3881,10 +3893,6 @@ footer .footer-container .navigation-container a:hover {
   }
 
   /* About Our Story Section */
-  .aos {
-    height: 100%;
-  }
-
   .aos .container {
     grid-template-columns: 1fr;
   }
@@ -3936,8 +3944,12 @@ footer .footer-container .navigation-container a:hover {
 
   /* Our Services Pages */
   /* Hero Section */
+  .hero-services {
+    height: 100%;
+  }
+
   .hero-services .hero-services-bg {
-    height: 100vh;
+    height: 100%;
     object-fit: cover;
   }
 
@@ -3956,11 +3968,48 @@ footer .footer-container .navigation-container a:hover {
 
   /* Case Studies Pages */
   /* Hero Section */
+  .hero-case {
+    height: 100%;
+  }
+
+  .hero-case .hero-case-bg {
+    height: 100%;
+    object-fit: cover;
+  }
+
   .hero-case .hero-case-bg.desktop {
     display: none;
   }
 
   .hero-case .hero-case-bg.mobile {
     display: block;
+  }
+
+  /* Our Proud Achievements Section */
+  .opa h2 {
+    font-size: 7vw;
+  }
+
+  .opa .opa-first-container .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .opa .opa-first-container .title h3 {
+    font-size: 3vw;
+  }
+
+  .opa .opa-first-container .title button {
+    width: 40%;
+    font-size: 2.5vw;
+    padding: 2vw 3vw;
+    margin: 0;
+  }
+
+  .opa .opa-first-container .title p {
+
+    font-size: 2vw;
   }
 }

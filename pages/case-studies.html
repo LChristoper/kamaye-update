@@ -132,10 +132,10 @@
 
   <!-- Our Proud Achievements Section Start -->
   <section class="opa">
-    <h2>Success Stories <br />
+    <h2 class="reveal-bottom-2">Success Stories <br />
       <span>Our Proud Achievements</span>
     </h2>
-    <div class="opa-first-container">
+    <div class="opa-first-container reveal-right-3">
       <div class="title">
         <h3>Title Copy Goes Here</h3>
         <button>Get Started</button>
@@ -148,7 +148,7 @@
       </div>
     </div>
     <div class="opa-grid-container">
-      <div class="wrapper" onclick="openModal(this.getAttribute('data-image'))"
+      <div class="wrapper reveal-bottom-3" onclick="openModal(this.getAttribute('data-image'))"
         data-image="../assets/img/case-studies/Case/akulaku.jpg">
         <img src="../assets/img/case-studies/Case/akulaku.jpg" alt="Akulaku">
         <h4>Akulaku</h4>
@@ -166,7 +166,7 @@
           <p class="category">#LifestyleCategory</p>
         </div>
       </div>
-      <div class="wrapper" onclick="openModal(this.getAttribute('data-image'))"
+      <div class="wrapper reveal-bottom-3" onclick="openModal(this.getAttribute('data-image'))"
         data-image="../assets/img/case-studies/Case/telkomsel-redi.jpg">
         <img src="../assets/img/case-studies/Case/telkomsel-redi.jpg" alt="Telkomsel Redi">
         <h4>Telkomsel Redi</h4>
@@ -184,7 +184,7 @@
           <p class="category">#Financial Education #LifestyleCategory</p>
         </div>
       </div>
-      <div class="wrapper" onclick="openModal(this.getAttribute('data-image'))"
+      <div class="wrapper reveal-bottom-3" onclick="openModal(this.getAttribute('data-image'))"
         data-image="../assets/img/case-studies/Case/chocolatos-drink-powder-1.jpg">
         <img src="../assets/img/case-studies/Case/chocolatos-drink-powder-1.jpg" alt="Chocolatos Drink Powder">
         <h4>Chocolatos Drink Powder</h4>
@@ -202,7 +202,7 @@
           <p class="category">#Food #Cooking</p>
         </div>
       </div>
-      <div class="wrapper" onclick="openModal(this.getAttribute('data-image'))"
+      <div class="wrapper reveal-bottom-3" onclick="openModal(this.getAttribute('data-image'))"
         data-image="../assets/img/case-studies/Case/chocolatos-drink-powder-2.jpg">
         <img src="../assets/img/case-studies/Case/chocolatos-drink-powder-2.jpg" alt="Chocolatos Drink Powder">
         <h4>Chocolatos Drink Powder</h4>
@@ -220,7 +220,7 @@
           <p class="category">#Food #Cooking</p>
         </div>
       </div>
-      <div class="wrapper" onclick="openModal(this.getAttribute('data-image'))"
+      <div class="wrapper reveal-bottom-3" onclick="openModal(this.getAttribute('data-image'))"
         data-image="../assets/img/case-studies/Case/line-webtoon.jpg">
         <img src="../assets/img/case-studies/Case/line-webtoon.jpg" alt="Line Webtoon">
         <h4>Line Webtoon</h4>
@@ -238,7 +238,7 @@
           <p class="category">#Entertainment</p>
         </div>
       </div>
-      <div class="wrapper" onclick="openModal(this.getAttribute('data-image'))"
+      <div class="wrapper reveal-bottom-3" onclick="openModal(this.getAttribute('data-image'))"
         data-image="../assets/img/case-studies/Case/nanovest.jpg">
         <img src="../assets/img/case-studies/Case/nanovest.jpg" alt="Nanovest">
         <h4>Nanovest</h4>
@@ -357,7 +357,7 @@
           <li><a href="case-studies.html">CASE STUDIES</a></li>
         </ul>
         <ul>
-          <li><a href="#">SERVICES</a></li>
+          <li>SERVICES</li>
           <li>Influencer Database</li>
           <li>Influencer Marketing</li>
         </ul>
@@ -380,7 +380,6 @@
   <!-- My Javascript-->
   <script src="../js/script.js"></script>
 
-  <!-- Feather Icons -->
   <script>
     feather.replace();
 
@@ -471,7 +470,7 @@
       distance: '50px',
       useDelay: 'onload',
       delay: 400,
-      interval: 3000;
+      interval: 3000,
       beforeReveal: function (domEl) {
         domEl.classList.add('visible'); // Tambahkan class 'visible' untuk menghilangkan blur
       },
