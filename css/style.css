@@ -678,7 +678,7 @@ h2 {
 .wrd .panel.panel1.desktop {
   width: 100%;
   background-color: var(--yahbloo);
-  padding: 4vw 1%;
+  padding: 4vw 0;
   font-family: "TT-Hoves-Thin", sans-serif;
   position: relative;
   overflow: hidden;
@@ -717,7 +717,8 @@ h2 {
 
 .wrd .panel.panel1.desktop .panel1-graph .panel1-graph-title {
   color: #fff;
-  flex: 1 1 1vw;
+  flex: 1;
+  margin-left: 4%;
 }
 
 .wrd .panel.panel1.desktop .panel1-graph .panel1-graph-title h5 {
@@ -729,7 +730,7 @@ h2 {
 
 .wrd .panel.panel1.desktop .panel1-graph .panel1-graph-followers {
   color: var(--jade_android);
-  flex: 1 1 40vw;
+  flex: 1 1 42vw;
   margin-right: 15vw;
 }
 
@@ -774,7 +775,7 @@ h2 {
 }
 
 .wrd .panel img {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   object-fit: cover;
   position: absolute;
@@ -782,7 +783,7 @@ h2 {
 }
 
 .wrd .panel.panel2.desktop {
-  background-image: url(../assets/img/home-page/2.jpg);
+  background-image: url(../assets/img/home-page/horizontal-2.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -822,14 +823,14 @@ h2 {
 }
 
 .wrd .panel.panel2.desktop .panel2-container .business {
-  flex: 1 1 6vw;
+  flex: 1 1 7vw;
   font-size: 2.2vw;
   color: var(--jade_android);
   font-weight: bold;
 }
 
 .wrd .panel.panel2.desktop .panel2-container .audience {
-  flex: 1 1 1rem;
+  flex: 1 1 3vw;
 }
 
 .wrd .panel.panel2.desktop .panel2-container .audience p {
@@ -844,7 +845,8 @@ h2 {
 }
 
 .wrd .panel.panel3.desktop {
-  background-image: url(../assets/img/home-page/2.jpg);
+  background-color: var(--yellups);
+  background-image: url(../assets/img/home-page/horizontal-3.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
