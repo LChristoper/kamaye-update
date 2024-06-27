@@ -7,15 +7,14 @@ document.querySelector("#hamburger-menu").onclick = (event) => {
   console.log("Hamburger menu clicked"); // Debugging
   navbarContainer.classList.toggle("active");
   navbarNav.classList.toggle("active");
-  event.stopPropagation(); // Menghentikan event agar tidak terpropagasi ke document
+  event.stopPropagation();
 };
 
 // Menambahkan event listener pada setiap item navigasi di navbar
 document.querySelectorAll(".navbar-nav a").forEach((item) => {
   item.addEventListener("click", (event) => {
-    // Tutup navbar-nav setelah item navigasi diklik
     navbarNav.classList.remove("active");
-    event.stopPropagation(); // Menghentikan event agar tidak terpropagasi ke document
+    event.stopPropagation();
   });
 });
 
@@ -26,10 +25,9 @@ const navbar = document.querySelector(".navbar");
 window.addEventListener("scroll", function () {
   let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-  // Cek apakah navbar-nav tidak memiliki kelas 'active'
   if (!navbarNav.classList.contains("active")) {
     if (scrollTop > lastScrollTop) {
-      navbar.style.top = "-120px"; // Sesuaikan dengan tinggi navbar Anda
+      navbar.style.top = "-120px";
     } else {
       navbar.style.top = "0";
     }
@@ -44,9 +42,9 @@ const influencersOdometer = document.querySelector(".influencers-odometer");
 
 // Opsi untuk Intersection Observer
 const observerOptions = {
-  root: null, // menggunakan viewport sebagai area konteks
+  root: null,
   rootMargin: "0px",
-  threshold: 0.1, // elemen harus terlihat minimal 10% sebelum trigger
+  threshold: 0.1,
 };
 
 // Fungsi yang dijalankan ketika elemen masuk ke dalam viewport
@@ -66,16 +64,13 @@ const handleIntersect = (entries, observer) => {
         influencersOdometer.innerHTML = 5000;
       }
 
-      // Berhenti mengamati setelah odometer diinisialisasi
       observer.unobserve(entry.target);
     }
   });
 };
 
-// Membuat observer dengan fungsi callback dan opsi
 const observer = new IntersectionObserver(handleIntersect, observerOptions);
 
-// Memulai mengamati elemen target jika elemen tersebut ada di halaman
 if (countOdometer) {
   observer.observe(countOdometer);
 }
@@ -90,15 +85,15 @@ document.addEventListener("DOMContentLoaded", function () {
   var observer = new IntersectionObserver(function (entries) {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.play(); // Memulai animasi Lottie
+        entry.target.play();
       } else {
-        entry.target.stop(); // Menghentikan animasi Lottie
+        entry.target.stop();
       }
     });
-  }, { threshold: 0.5 }); // Trigger ketika 50% dari elemen masuk ke dalam viewport
+  }, { threshold: 0.5 });
 
   oiGraphLottie.forEach(lottie => {
-    observer.observe(lottie); // Mengamati setiap elemen Lottie
+    observer.observe(lottie);
   });
 });
 
@@ -118,7 +113,7 @@ if (typeof gsap !== 'undefined' && gsap.registerPlugin && typeof ScrollTrigger !
       start: "top top",
       end: () =>
         "+=" + (horizontalSectionWidth - document.documentElement.clientWidth),
-      scrub: 0.5, // Mengurangi nilai scrub untuk mengurangi sensitivitas
+      scrub: 0.5,
     },
   });
 } else {
@@ -200,19 +195,16 @@ function changeContent(destination) {
       </div>
       `;
       break;
-    // Add more cases as needed
     default:
   }
 
   const contentDisplay = document.querySelector(".aec-content-display");
   contentDisplay.innerHTML = content;
 
-  // Find all .right-display elements within the newly added content and add the animation class
   document
     .querySelectorAll(".aec-content-display .right-display")
     .forEach((el) => {
-      el.classList.remove("right-display-animate"); // Remove the class to reset the animation
-      // Trigger reflow to restart the animation
+      el.classList.remove("right-display-animate");
       void el.offsetWidth;
       el.classList.add("right-display-animate");
     });
@@ -232,19 +224,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   funnels.forEach((funnel) => {
     funnel.addEventListener("click", function () {
-      // Reset opacity for all funnels
       funnels.forEach((f) => {
         f.style.opacity = 0.2;
-        f.classList.add('bounce'); // Ensure bounce is added when not active
+        f.classList.add('bounce');
       });
-      // Set the clicked funnel's opacity to 1 and remove bounce
       this.style.opacity = 1;
       this.classList.remove('bounce');
     });
   });
 
   function setInitialState(funnels) {
-    // Set the first funnel's opacity to 1 and the rest to 0.2
     funnels.forEach((funnel, index) => {
       funnel.style.opacity = index === 0 ? 1 : 0.2;
       if (index === 0) {
@@ -265,7 +254,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }, {
-    threshold: 0.5 // Trigger ketika 50% dari elemen masuk ke dalam viewport
+    threshold: 0.5
   });
 
   const contactContainer = document.querySelector('.contact-us-container');
@@ -273,23 +262,52 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Modal Box
-function openModal(imageSrc) {
-  var modal = document.getElementById("Modal");
-  var modalImg = document.getElementById("modalImage");
-  modal.style.display = "block";
-  modalImg.src = imageSrc;
+// Highlights Modal Box
+function openModalOHC1() {
+  const modalOHC1 = document.getElementById('modal-ohc-1');
+  modalOHC1.style.display = "block";
 }
 
-function closeModal() {
-  var modal = document.getElementById('Modal');
+function closeModalOHC1() {
+  var modal = document.getElementById('modal-ohc-1');
+  modal.style.display = 'none';
+}
+
+function openModalOHC2() {
+  const modalOHC2 = document.getElementById('modal-ohc-2');
+  modalOHC2.style.display = "block";
+}
+
+function closeModalOHC2() {
+  var modal = document.getElementById('modal-ohc-2');
+  modal.style.display = 'none';
+}
+
+// Grid Modal Box
+function openModalImg(imageSrcDesktop, imageSrcMobile) {
+  const modalImage = document.getElementById('modalImage');
+  const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+  if (width <= 900) {
+    modalImage.src = imageSrcMobile;
+  } else {
+    modalImage.src = imageSrcDesktop;
+  }
+
+  var modal = document.getElementById("modal-ogc");
+  modal.style.display = "block";
+}
+
+function closeModalOGC() {
+  var modal = document.getElementById('modal-ogc');
   modal.style.display = 'none';
 }
 
 // Fungsi untuk menutup modal jika klik diluar modal
 window.onclick = function (event) {
-  var modal = document.getElementById('Modal');
-  if (event.target == modal) {
-    closeModal();
+  var modalOGC = document.getElementById('modal-ogc');
+  if (event.target == modalOGC) {
+    closeModalOGC();
   }
 }
 
