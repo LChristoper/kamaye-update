@@ -1378,7 +1378,7 @@ h2 {
 
 /* Home-Page Team Section */
 .home-team {
-  height: 110vh;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -2096,10 +2096,17 @@ footer .footer-container .navigation-container a:hover {
   margin: 2rem 0;
   font-size: 1.5vw;
   border-radius: 20px;
+  transition: 0.3s ease;
 }
 
+.opa .opa-highlights-container .title button:hover {
+  transform: scale(0.95);
+  filter: brightness(90%);
+}
+
+
 .opa .opa-highlights-container .title p {
-  width: 50%;
+  width: 70%;
   font-size: 1.2vw;
   margin-bottom: 20px;
 }
@@ -2386,6 +2393,18 @@ footer .footer-container .navigation-container a:hover {
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+.off .container .cs-off-title {
+  font-family: "TT-Hoves-Thin", sans-serif;
+  font-size: 2vw;
+  text-align: center;
+}
+
+.off .container .cs-off-title span {
+  font-family: "TT-Hoves-Bold", sans-serif;
+  font-size: 3.5vw;
+  margin-right: 1rem;
 }
 
 /* Media Queries */
@@ -3210,7 +3229,6 @@ footer .footer-container .navigation-container a:hover {
     text-align: justify;
     margin-right: 0;
   }
-
 
   .off .container .ibc-container {
     display: flex;
@@ -4214,5 +4232,47 @@ footer .footer-container .navigation-container a:hover {
   /* Grid Container */
   .modal-content-ogc img {
     max-width: 95%;
+  }
+}
+
+/* Scroll To Top */
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+}
+
+.Btn {
+  width: 45px;
+  height: 45px;
+  background: var(--jade_android);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  border: none;
+}
+
+.arrow path {
+  fill: black;
+}
+
+.Btn:hover .arrow {
+  animation: slide-in-bottom .7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

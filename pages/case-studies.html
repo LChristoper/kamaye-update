@@ -17,6 +17,10 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
+  <!-- Odometer -->
+  <link rel="stylesheet" href="../css/odometer.css" />
+  <script src="../js/odometer.js"></script>
+
 </head>
 
 <body style=" background-color: #FFcccc;">
@@ -73,11 +77,10 @@
           <div class="swiper-slide">
             <div class="title">
               <h3>Chocolatos</h3>
-              <button>Get Started</button>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae at inventore eveniet. Sit, voluptate.
-                Vero
-                porro culpa eaque, in aliquam architecto. Optio neque quae saepe, eveniet dolores pariatur maiores
-                beatae!
+              <button onclick="openModalOHC1()">View</button>
+              <p>Garudafood faced declining awareness and sales of its key product line, "Chocolatos," exacerbated by
+                global economic declines and shifts in consumer behavior towards digital platforms, rendering
+                traditional marketing methods ineffective.
               </p>
             </div>
             <div class="cs-img" onclick="openModalOHC1()">
@@ -87,11 +90,10 @@
           <div class="swiper-slide">
             <div class="title">
               <h3>Webtoon</h3>
-              <button>Get Started</button>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae at inventore eveniet. Sit, voluptate.
-                Vero
-                porro culpa eaque, in aliquam architecto. Optio neque quae saepe, eveniet dolores pariatur maiores
-                beatae!
+              <button onclick="openModalOHC2()">View</button>
+              <p>The primary challenge was to expand Naver Webtoon's audience in Indonesia, transitioning from appealing
+                mainly to young millennials to effectively engaging Gen Z, who have significant influence in the digital
+                entertainment space.
               </p>
             </div>
             <div class="cs-img" onclick="openModalOHC2()">
@@ -183,8 +185,135 @@
           <p class="category">#Financial Education #LifestyleCategory</p>
         </div>
       </div>
+      <div class="wrapper reveal-bottom-3"
+        onclick="openModalImg(this.getAttribute('data-image'), this.getAttribute('data-image-mobile'))"
+        data-image="../assets/img/case-studies/Case/tumbuh-lab.jpg"
+        data-image-mobile="../assets/img/case-studies/Case/mobile/tumbuhlab-mobile.jpg">
+        <img src="../assets/img/case-studies/Case/tumbuh-lab.jpg" alt="Tumbuh Lab">
+        <h4>Tumbuh Lab</h4>
+        <div class="case-details">
+          <table>
+            <tr>
+              <td><span>Talent</span></td>
+              <td>: @wendywalters</td>
+            </tr>
+            <tr>
+              <td><span>Level</span></td>
+              <td>: Mega Influencer</td>
+            </tr>
+          </table>
+          <p class="category">#Beauty #Lifestyle</p>
+        </div>
+      </div>
     </div>
   </section>
+  <!-- Our Proud Achievements Section End -->
+
+  <!-- Our Fun Fact Section Start -->
+  <section class="off" style="background-color: #ff6137;">
+    <div class="container">
+      <h2 class="cs-off-title"><span>Be a part</span> of our journey and solve your marketing problems with us!</h2>
+      <div class="ibc-container">
+        <div class="influencers-container flex">
+          <p class="number">
+            <span class="influencers-odometer">0000</span>+
+          </p>
+          <p class="ibc-title">Influencers</p>
+        </div>
+        <div class="brands-container flex">
+          <p class="number"><span class="brands-odometer">00</span>+</p>
+          <p class="ibc-title">Brands</p>
+        </div>
+        <div class="categories-container flex">
+          <p class="number">Unlimited</p>
+          <p class="ibc-title">Categories</p>
+        </div>
+      </div>
+    </div>
+    <div class="clients-container">
+      <div class="clients-logo">
+        <!-- Clients Section Start -->
+        <div class="clients-logo-slide">
+          <img src="../assets/img/clients/AIRWICK.png" alt="" />
+          <img src="../assets/img/clients/AKULAKU.png" alt="" />
+          <img src="../assets/img/clients/BAKMI MEWAH.png" alt="" />
+          <img src="../assets/img/clients/BNI46.png" alt="" />
+          <img src="../assets/img/clients/BUKALAPAK.png" alt="" />
+          <img src="../assets/img/clients/CHICKRO.png" alt="" />
+          <img src="../assets/img/clients/CHOCOLATOS.png" alt="" />
+          <img src="../assets/img/clients/CODASHOP.png" alt="" />
+          <img src="../assets/img/clients/DELICO.png" alt="" />
+          <img src="../assets/img/clients/DETTOL.png" alt="" />
+          <img src="../assets/img/clients/DEXAMEDICA.png" alt="" />
+          <img src="../assets/img/clients/FIZZO.png" alt="" />
+          <img src="../assets/img/clients/GAMEQOO.png" alt="" />
+          <img src="../assets/img/clients/garudafood.png" alt="" />
+          <img src="../assets/img/clients/GERY SALUT.png" alt="" />
+          <img src="../assets/img/clients/HALODODC.png" alt="" />
+          <img src="../assets/img/clients/HERBA ASIMOR.png" alt="" />
+          <img src="../assets/img/clients/INTI PRIMA RASA.png" alt="" />
+          <img src="../assets/img/clients/MAYORA.png" alt="" />
+          <img src="../assets/img/clients/NANOVEST.png" alt="" />
+          <img src="../assets/img/clients/NUTRIFFOD.png" alt="" />
+          <img src="../assets/img/clients/NUTRISARI.png" alt="" />
+          <img src="../assets/img/clients/OXYVIT.png" alt="" />
+          <img src="../assets/img/clients/PERFECTVIT.png" alt="" />
+          <img src="../assets/img/clients/RECKITT.png" alt="" />
+          <img src="../assets/img/clients/SAVIOR.png" alt="" />
+          <img src="../assets/img/clients/SHOPEE.png" alt="" />
+          <img src="../assets/img/clients/SHOPEEFOOD.png" alt="" />
+          <img src="../assets/img/clients/SHOPEEPAY.png" alt="" />
+          <img src="../assets/img/clients/STIMUNO.png" alt="" />
+          <img src="../assets/img/clients/SWISSE.png" alt="" />
+          <img src="../assets/img/clients/TELKOMSEL REDI.png" alt="" />
+          <img src="../assets/img/clients/TUMBUH LAB.png" alt="" />
+          <img src="../assets/img/clients/VANISH.png" alt="" />
+          <img src="../assets/img/clients/VISVAL.png" alt="" />
+          <img src="../assets/img/clients/WEBTOON.png" alt="" />
+        </div>
+        <div class="clients-logo-slide">
+          <img src="../assets/img/clients/AIRWICK.png" alt="" />
+          <img src="../assets/img/clients/AKULAKU.png" alt="" />
+          <img src="../assets/img/clients/BAKMI MEWAH.png" alt="" />
+          <img src="../assets/img/clients/BNI46.png" alt="" />
+          <img src="../assets/img/clients/BUKALAPAK.png" alt="" />
+          <img src="../assets/img/clients/CHICKRO.png" alt="" />
+          <img src="../assets/img/clients/CHOCOLATOS.png" alt="" />
+          <img src="../assets/img/clients/CODASHOP.png" alt="" />
+          <img src="../assets/img/clients/DELICO.png" alt="" />
+          <img src="../assets/img/clients/DETTOL.png" alt="" />
+          <img src="../assets/img/clients/DEXAMEDICA.png" alt="" />
+          <img src="../assets/img/clients/FIZZO.png" alt="" />
+          <img src="../assets/img/clients/GAMEQOO.png" alt="" />
+          <img src="../assets/img/clients/garudafood.png" alt="" />
+          <img src="../assets/img/clients/GERY SALUT.png" alt="" />
+          <img src="../assets/img/clients/HALODODC.png" alt="" />
+          <img src="../assets/img/clients/HERBA ASIMOR.png" alt="" />
+          <img src="../assets/img/clients/INTI PRIMA RASA.png" alt="" />
+          <img src="../assets/img/clients/MAYORA.png" alt="" />
+          <img src="../assets/img/clients/NANOVEST.png" alt="" />
+          <img src="../assets/img/clients/NUTRIFFOD.png" alt="" />
+          <img src="../assets/img/clients/NUTRISARI.png" alt="" />
+          <img src="../assets/img/clients/OXYVIT.png" alt="" />
+          <img src="../assets/img/clients/PERFECTVIT.png" alt="" />
+          <img src="../assets/img/clients/RECKITT.png" alt="" />
+          <img src="../assets/img/clients/SAVIOR.png" alt="" />
+          <img src="../assets/img/clients/SHOPEE.png" alt="" />
+          <img src="../assets/img/clients/SHOPEEFOOD.png" alt="" />
+          <img src="../assets/img/clients/SHOPEEPAY.png" alt="" />
+          <img src="../assets/img/clients/STIMUNO.png" alt="" />
+          <img src="../assets/img/clients/SWISSE.png" alt="" />
+          <img src="../assets/img/clients/TELKOMSEL REDI.png" alt="" />
+          <img src="../assets/img/clients/TUMBUH LAB.png" alt="" />
+          <img src="../assets/img/clients/VANISH.png" alt="" />
+          <img src="../assets/img/clients/VISVAL.png" alt="" />
+          <img src="../assets/img/clients/WEBTOON.png" alt="" />
+        </div>
+        <!-- Clients Section End -->
+      </div>
+    </div>
+  </section>
+  <!-- Our Fun Fact Section End -->
 
   <!-- Modal Box Highlights Start -->
   <div id="modal-ohc-1" class="modal-ohc-1">
@@ -395,8 +524,19 @@
     </div>
   </footer>
   <!-- Footer Section End - ->
-    
-    
+  
+  <!-- Scroll To Top Button Start -->
+  <section class="stt">
+    <button class="Btn" onclick="topFunction()" id="scrollToTopBtn" title="Back To Top">
+      <svg height="1.2em" class="arrow" viewBox="0 0 512 512">
+        <path
+          d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z">
+        </path>
+      </svg>
+    </button>
+  </section>
+  <!-- Scroll To Top Button End -->
+
   <!-- Javascript  -->
   <!-- Scroll Reveal -->
   <script src="https://unpkg.com/scrollreveal"></script>
