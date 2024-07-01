@@ -1377,11 +1377,6 @@ h2 {
 }
 
 /* Home-Page Team Section */
-.home-team {
-  height: 100%;
-  overflow: hidden;
-}
-
 .home-team .team-video {
   object-fit: cover;
   width: 100%;
@@ -3946,11 +3941,6 @@ footer .footer-container .navigation-container a:hover {
   }
 
   /* Team Section */
-  .home-team {
-    height: 100vh;
-    overflow: none;
-  }
-
   .home-team .team-video {
     width: 100%;
   }
