@@ -93,6 +93,10 @@ h2 {
   font-family: "TT-Hoves-Black", sans-serif;
 }
 
+a:visited {
+  text-decoration: none;
+}
+
 @keyframes change-background {
   0% {
     background-color: #6a68eb;
@@ -364,8 +368,11 @@ h2 {
 .digital-agency .wrapper .button-container .get-to-know-btn:hover {
   background-color: rgba(0, 0, 0, 0);
   border: 2px solid #000;
-  color: #000;
   cursor: pointer;
+}
+
+.digital-agency .wrapper .button-container .get-to-know-btn:hover a {
+  color: #000;
 }
 
 .digital-agency .wrapper .button-container .get-to-know-btn:active {
@@ -383,11 +390,19 @@ h2 {
   border: 2px solid #fff;
 }
 
+.digital-agency .wrapper .button-container .success-story-btn a {
+  color: #000;
+}
+
 .digital-agency .wrapper .button-container .success-story-btn:hover {
   background-color: rgba(0, 0, 0, 0);
   border: 2px solid #fff;
   color: #fff;
   cursor: pointer;
+}
+
+.digital-agency .wrapper .button-container .success-story-btn a:hover {
+  color: #fff;
 }
 
 .digital-agency .wrapper .button-container .success-story-btn:active {
@@ -2781,6 +2796,7 @@ footer .footer-container .navigation-container a:hover {
   }
 
   .wrd .panel.panel1.mobile {
+    width: 100%;
     display: block;
     background-color: var(--yahbloo);
     padding: 3% 0;
@@ -2815,7 +2831,7 @@ footer .footer-container .navigation-container a:hover {
   .wrd .panel.panel1.mobile .panel1-graph {
     margin-left: 10%;
     margin-top: 5vw;
-    padding-right: 8%;
+    margin-right: 8%;
   }
 
   .wrd .panel.panel1.mobile .panel1-graph .panel1-graph-title {
@@ -2876,7 +2892,7 @@ footer .footer-container .navigation-container a:hover {
   }
 
   .wrd .panel.panel2.mobile img {
-    width: 90vw;
+    width: 100%;
     height: auto;
     bottom: 0;
     left: 0;
@@ -2891,7 +2907,7 @@ footer .footer-container .navigation-container a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 7%;
+    padding-top: 4%;
     color: #fff;
   }
 
@@ -2938,7 +2954,6 @@ footer .footer-container .navigation-container a:hover {
     display: block;
     background-color: var(--yellups);
     color: var(--discordian_blue);
-    padding-left: 7px;
   }
 
   .wrd .panel.panel3.mobile img {
@@ -3348,14 +3363,13 @@ footer .footer-container .navigation-container a:hover {
   }
 
   .testimonial .testimonial-container .oclwwd-container h2 {
-    font-size: 8vw;
+    font-size: 7vw;
     margin-top: 0;
   }
 
   .testimonial .testimonial-container .oclwwd-container p {
-    font-size: 3.7vw;
+    font-size: 3vw;
     margin-right: 13vw;
-    margin-bottom: 6vw;
   }
 
   .testimonial .testimonial-container .testimonials-container-mobile .testimonial-wrapper {
@@ -3684,7 +3698,7 @@ footer .footer-container .navigation-container a:hover {
 
   .wwd .os .os-container-flex .os-content-flex .os-content-wit a {
     padding: 5vw 3vw;
-    width: 50vw;
+    width: 80%;
     margin-bottom: 1rem;
     font-size: 0.7rem;
     text-align: center;
